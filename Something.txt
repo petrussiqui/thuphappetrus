@@ -1,0 +1,8 @@
+<html>
+<head>
+	<title>Website của Quí</title>
+</head>
+<body>
+	<marquee>Quí ù xỏa trá</marquee>
+</body>
+</html>
