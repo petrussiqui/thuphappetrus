@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/petrus-app/static/css/main.88896f57.css",
+    "main.js": "/petrus-app/static/js/main.469795a4.js",
+    "static/js/787.f493ff33.chunk.js": "/petrus-app/static/js/787.f493ff33.chunk.js",
+    "index.html": "/petrus-app/index.html",
+    "main.88896f57.css.map": "/petrus-app/static/css/main.88896f57.css.map",
+    "main.469795a4.js.map": "/petrus-app/static/js/main.469795a4.js.map",
+    "787.f493ff33.chunk.js.map": "/petrus-app/static/js/787.f493ff33.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88896f57.css",
+    "static/js/main.469795a4.js"
+  ]
+}
