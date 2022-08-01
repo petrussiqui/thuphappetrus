@@ -4,11 +4,13 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PostList from './component/postlist/postlist';
+import Ex1 from './component/hook/Ex1'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
+    <Ex1 />
     <PostList />
   </React.StrictMode>
 );
