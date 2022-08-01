@@ -1,3 +1,6 @@
+//----useState----
+
+
 import { useState } from "react";
 import Ex2 from "./Ex2"
 import "./hook.scss"
