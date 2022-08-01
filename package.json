@@ -1,6 +1,6 @@
 {
-  "homepage": "https://petrussiqui.github.io/petrus-app",
-  "name": "petrus-reactjs",
+  "homepage": "https://petrussiqui.github.io/petrus-app/",
+  "name": "petrus-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
