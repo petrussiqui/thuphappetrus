@@ -1,7 +1,8 @@
 //------useRef --------
 // - Khởi tạo giá trị với global. Chỉ run 1 lần
 // - Syntax: let refName = useRef()
-// - getElement: <h1 ref={refName} >...
+// - getElement tag: <h1 ref={refName} >...
+// - functionComponent k có ref : undefined nếu truyền ref ta dùng forwardRef khi export Comp
 
 
 import { useRef, useState } from "react";

@@ -43,18 +43,23 @@
 // export default Ex6
 
 //---------TODO List-----
+// - useReducer dùng cho project lớn, dùng để chia file: action (2), reducer (1,3)
+
 import { Button, ListItemButton, ListItemText, TextField } from "@mui/material";
 import { useReducer } from "react";
 
+// 1. set initState
 const initState = {
     job: '',
     jobs: []
 }
+
+// 2. set Actions
 const SET_JOB = 'set_job'
 const ADD_JOB = 'add_job'
 const DELETE_JOB = 'delete_job'
 
-//nhận dữ liệu khi input onchange
+    //nhận dữ liệu khi input onchange
 const setJob = valueLoad => {
     return {
         type: SET_JOB,
@@ -67,8 +72,14 @@ const addJob = valueLoad => {
         valueLoad
     }
 }
+const deleteJob = valueLoad => {
+    return {
+        type: DELETE_JOB,
+        valueLoad
+    }
+}
 
-
+// 3. set reducer
 const reducer = (state, action) => {
     switch (action.type) {
         case SET_JOB:
@@ -82,7 +93,14 @@ const reducer = (state, action) => {
                 jobs: [...state.jobs, action.valueLoad]
             }
         case DELETE_JOB:
-            return state - 1
+            {
+                const newJobs = [...state.jobs]
+                newJobs.splice(action.valueLoad, 1)
+                return {
+                    ...state,
+                    jobs: newJobs
+                }
+            }
 
         default:
             throw new Error('Invalid Action');
@@ -95,7 +113,7 @@ function Ex6() {
 
     const handleAdd = () => {
         dispatch(addJob(job))
-        console.log(jobs)
+        dispatch(setJob(''))
     }
 
     return (
@@ -110,7 +128,9 @@ function Ex6() {
             >ADD</Button>
 
             {jobs.map((job, index) => (
-                <ListItemButton key={index}>
+                <ListItemButton key={index}
+                    onClick={() => { dispatch(deleteJob(index)) }}
+                >
                     <ListItemText primary={job} />
                 </ListItemButton>
             ))}

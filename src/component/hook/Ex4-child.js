@@ -1,9 +1,14 @@
-import { memo } from "react";
+
+import { memo, useContext } from "react";
+import { ThemeContext } from "./Ex7.js";
+
 function Ex4Child({onCount4}) {
-    console.log('render');
+   
+    const theme = useContext(ThemeContext)
+
     return (
         <div>
-            <h2>Component use memo </h2>
+            <h2 className={theme} >Component use memo </h2>
             <button onClick={onCount4}>Count</button>
         </div>
     )

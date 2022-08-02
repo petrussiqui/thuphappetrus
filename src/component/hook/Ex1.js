@@ -4,11 +4,12 @@
 import { useState, useMemo } from "react";
 import Ex2 from "./Ex2"
 import Ex3 from "./Ex3"
-import Ex4 from "./Ex4";
+// import Ex4 from "./Ex4";
 import Ex5 from "./Ex5";
 import { Button } from "@mui/material";
 import "./hook.scss"
 import Ex6 from "./Ex6";
+import Ex7 from "./Ex7";
 //useState basic
 function Ex1() {
     // // component sẽ run lại sau khi gọi lại handle 
@@ -28,7 +29,7 @@ function Ex1() {
             <>
                 <Ex6 />
                 <Ex5 />
-                <Ex4 />
+                <Ex7 />
                 <Ex3 />
             </>
         )

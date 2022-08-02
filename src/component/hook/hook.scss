@@ -17,4 +17,15 @@
         max-height: 400px;
         overflow-y: scroll;
     }
+    .light{
+        padding: 10px;
+        transition: 0.5s;
+    }
+    .dark{
+        padding: 10px;
+        color: antiquewhite;
+        background-color: #1e1e1e;
+        transition: 0.5s;
+        
+    }
 }
