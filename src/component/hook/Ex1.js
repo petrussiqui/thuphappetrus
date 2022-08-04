@@ -10,6 +10,7 @@ import { Button } from "@mui/material";
 import "./hook.scss"
 import Ex6 from "./Ex6";
 import Ex7 from "./Ex7";
+import Ex8 from "./Ex8";
 //useState basic
 function Ex1() {
     // // component sẽ run lại sau khi gọi lại handle 
@@ -27,6 +28,7 @@ function Ex1() {
     const hookEx = useMemo(() => {
         return (
             <>
+                
                 <Ex6 />
                 <Ex5 />
                 <Ex7 />
@@ -35,6 +37,8 @@ function Ex1() {
         )
     }, []);
     return (
+        <>
+        <Ex8 />
         <div className="newSession">
             {/* <h1> {counter} </h1>
             <button onClick={handle}>Increase</button> */}
@@ -44,6 +48,7 @@ function Ex1() {
             }}> Mounted / Unmounted</Button>
             {show || <Ex2 />}
         </div>
+        </>
     )
 }
 export default Ex1

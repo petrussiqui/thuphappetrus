@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+// import Rooter from './routes'
+import PostList from './component/postlist/postlist';
+import Example from './component/hook/Ex1'
+import HomePage from './component/onepirate/Home'
+import { Routes, Route } from 'react-router-dom';
+// import { Button, ButtonGroup } from '@mui/material';
+// import HomeIcon from '@mui/icons-material/Home'
+import AppAppBar from './component/onepirate/modules/views/AppAppBar';
+import NotFound from "./component/Page404";
+import './App.scss'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppAppBar />
+      {/* <ButtonGroup variant='contained'>
+        <Button
+          startIcon={<HomeIcon />}
+          color="primary"
+        ><Link to="/" >HomePage </Link></Button>
+        <Button
+          color="success"
+        ><Link to="/Example" >Example </Link></Button>
+        <Button
+          color="success"
+        ><Link to="/Postlist" >PostList </Link></Button>
+      </ButtonGroup> */}
+
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/Example' element={<Example />} />
+        <Route path='/Postlist' element={<PostList />} />
+        <Route path= "/404" element= {<NotFound />} />
+      </Routes>
     </div>
   );
 }
