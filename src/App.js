@@ -17,19 +17,19 @@ function App() {
         <Button
           startIcon={<HomeIcon />}
           color="primary"
-        ><Link to="/" >HomePage </Link></Button>
+        ><Link to="/petrus-app/" >HomePage </Link></Button>
         <Button
           color="success"
-        ><Link to="/Example" >Example </Link></Button>
+        ><Link to="/petrus-app/Example" >Example </Link></Button>
         <Button
           color="success"
-        ><Link to="/Postlist" >PostList </Link></Button>
+        ><NavLink to="/petrus-app/Postlist" >PostList </NavLink></Button>
       </ButtonGroup> */}
 
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/Example' element={<Example />} />
-        <Route path='/Postlist' element={<PostList />} />
+        <Route path='/petrus-app' element={<HomePage />} />
+        <Route path='/petrus-app/Example' element={<Example />} />
+        <Route path='/petrus-app/Postlist' element={<PostList />} />
         <Route path= "/404" element= {<NotFound />} />
       </Routes>
     </div>
