@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <AppAppBar />
-      {/* <ButtonGroup variant='contained'>
+      <ButtonGroup variant='contained'>
         <Button
           startIcon={<HomeIcon />}
           color="primary"
@@ -24,7 +24,7 @@ function App() {
         <Button
           color="success"
         ><NavLink to="/petrus-app/Postlist" >PostList </NavLink></Button>
-      </ButtonGroup> */}
+      </ButtonGroup>
 
       <Routes>
         <Route path='/petrus-app' element={<HomePage />} />

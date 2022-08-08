@@ -1,21 +1,20 @@
 import { Navigate, useRoutes } from "react-router-dom";
-import HomePage from './component/onepirate/Home'
-import NotFound from "./pages/Page404";
-// ----------------------------------------------------------------------
-
 export default function Router() {
-  return useRoutes([
+  let element = useRoutes([
     {
-      path: "/",
-      element: <HomePage />
+      path: "/dashboard",
+      element: <Dashboard />,
+      children: [
+        {
+          path: "messages",
+          element: <DashboardMessages />,
+        },
+        { path: "tasks", element: <DashboardTasks /> },
+      ],
     },
-    {
-      path: "/404",
-      element: <NotFound />
-    },
-    {
-      path: "*",
-      element: <Navigate to="/" replace />
-    },
+    { path: "about", element: <AboutPage /> },
+    { path: '404', element: <NotFound /> },
+    { path: '*', element: <Navigate to="/404" replace /> },
   ]);
-}
+  return Router;
+} 
