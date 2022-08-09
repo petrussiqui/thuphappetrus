@@ -1,0 +1,14 @@
+.heading{
+    color: darkblue;
+    font-size: 24px;
+}
+
+.btnLink {
+    text-decoration: solid 1px darkblue;
+    color: darkblue;
+    padding: 5px;
+    margin: 10px;
+}
+.active{
+    color: crimson;
+}
