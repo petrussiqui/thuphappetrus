@@ -3,7 +3,7 @@
 import { Grid, Box, styled, Container } from '@mui/material';
 import * as CusConst from '../settings/constants'
 // ----------------------------------------------------------------------
-const CusGird = styled(Grid)(() => ({
+const CusGrid = styled(Grid)(() => ({
   marginTop: '50px',
   marginBottom: '50px',
   textAlign: 'center',
@@ -17,7 +17,7 @@ const CusGird = styled(Grid)(() => ({
 export default function Page404() {
   return (
     <Container>
-      <CusGird container columnSpacing={2} sx={{ alignItems: 'center'}}>
+      <CusGrid container columnSpacing={2} sx={{ alignItems: 'center'}}>
         <Grid xs={12} md={6}>
           <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_4qhciwpm.json"
             background="transparent" speed="1" loop autoplay></lottie-player>
@@ -28,7 +28,7 @@ export default function Page404() {
             <CusConst.CUS_BUTTON_BLUE variant='contained'> Back to home!</CusConst.CUS_BUTTON_BLUE>
           </Box>
         </Grid>
-      </CusGird>
+      </CusGrid>
     </Container>
   );
 }

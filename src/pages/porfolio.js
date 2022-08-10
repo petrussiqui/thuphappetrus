@@ -3,7 +3,7 @@
 import {  Container, Grid, styled } from "@mui/material";
 import React from "react";
 
-const CusGird = styled(Grid)(()=>({
+const CusGrid = styled(Grid)(()=>({
     marginTop:'20px',
     marginBottom: '20px',
 }));
@@ -12,7 +12,7 @@ function Porfolio() {
     return (
         <React.Fragment>
             <Container maxWidth="xl">
-                <CusGird container columnSpacing={2} sx={{ order: { xs: 1, md: 2 } }}>
+                <CusGrid container columnSpacing={2} sx={{ order: { xs: 1, md: 2 } }}>
                
                     <Grid xs={0} md={3}>
                        
@@ -25,7 +25,7 @@ function Porfolio() {
                     <Grid xs={0} md={3}>
                        
                     </Grid>
-                </CusGird>
+                </CusGrid>
             </Container>
         </React.Fragment>
     );
