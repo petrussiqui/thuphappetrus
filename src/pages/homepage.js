@@ -1,5 +1,6 @@
 import { Box, Button, Container, Grid, styled } from "@mui/material";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import * as CusConst from '../settings/constants';
 
 const CusGrid = styled(Grid)(() => ({
@@ -11,30 +12,30 @@ const CusGrid = styled(Grid)(() => ({
     },
 }));
 //Custom Tag with scss and responsive
-const CusGridContent = styled(Grid)(({theme}) => ({
+const CusGridContent = styled(Grid)(({ theme }) => ({
     display: 'flex',
     flexFlow: 'wrap',
     alignContent: 'center',
     justifyContent: 'stretch',
-    paddingLeft:'30px',
+    paddingLeft: '30px',
     [theme.breakpoints.down('sm')]: {
-        paddingRight:'30px',
+        paddingRight: '30px',
         justifyContent: 'center',
     },
-    '& h2':{
+    '& h2': {
         fontSize: '28px',
         color: CusConst.ACCENT_COLOR,
-        marginBottom:'20px', 
+        marginBottom: '20px',
         [theme.breakpoints.down('sm')]: {
-            textAlign:'center',
-         },
+            textAlign: 'center',
+        },
     },
-    '& p':{
-        fontSize:'16px',
-        lineHeight:'1.6em',
+    '& p': {
+        fontSize: '16px',
+        lineHeight: '1.6em',
         [theme.breakpoints.down('sm')]: {
-            textAlign:'justify',
-         },
+            textAlign: 'justify',
+        },
     },
 }));
 const CusButton = styled(Button)(() => ({
@@ -43,25 +44,28 @@ const CusButton = styled(Button)(() => ({
     marginLeft: '10px',
     marginRight: '10px',
     minWidth: '130px',
-
+    '& a': {
+        textDecoration: 'none',
+        color: 'White',
+    }
 }));
-const CusBoxImg1 = styled(Box)(({theme}) => ({
-        position: 'absolute', width: '40%', right: '-140px', 
-        bottom: '-300px', zIndex: '-1', opacity: '0.5',
-    [theme.breakpoints.down('md')]:{
+const CusBoxImg1 = styled(Box)(({ theme }) => ({
+    position: 'absolute', width: '40%', right: '-140px',
+    bottom: '-300px', zIndex: '-1', opacity: '0.5',
+    [theme.breakpoints.down('md')]: {
         width: '70%',
         right: '0',
         bottom: '100px',
-        top:'unset',
+        top: 'unset',
     }
 }));
-const CusBoxImg2 = styled(Box)(({theme}) => ({
+const CusBoxImg2 = styled(Box)(({ theme }) => ({
     position: 'absolute', width: '40%', left: '-140px', top: '-150px', zIndex: '-1', opacity: '0.5',
-    [theme.breakpoints.down('md')]:{
+    [theme.breakpoints.down('md')]: {
         width: '50%',
         left: '0',
         bottom: '300px',
-        top:'unset',
+        top: 'unset',
     }
 }));
 function Homepage() {
@@ -79,7 +83,7 @@ function Homepage() {
                 <Container maxWidth="lg">
                     <CusGrid container columnSpacing={2} sx={{
                         minHeight: { xs: 'none', md: '75vh' },
-                        flexDirection:{xs:'column-reverse' ,md:'unset'}
+                        flexDirection: { xs: 'column-reverse', md: 'unset' }
                     }}>
                         <Grid xs={12} md={7}
                             sx={{
@@ -105,8 +109,10 @@ function Homepage() {
                                     <CusButton componentType='a' variant="contained" href="#section2">
                                         Read More
                                     </CusButton>
-                                    <CusButton variant="contained" componentType='a' href="/petrus-app/contact/">
-                                        Contact
+                                    <CusButton variant="contained">
+                                        <NavLink to="/petrus-app/contact/">
+                                            Contact
+                                        </NavLink>
                                     </CusButton>
                                 </Box>
                             </Box>
@@ -117,7 +123,7 @@ function Homepage() {
                             alignContent: 'center',
                         }}>
                             <Box sx={{
-                                padding:{xs:'20px 20px 0px'},
+                                padding: { xs: '20px 20px 0px' },
                             }}>
                                 <img src='/petrus-app/img/me.png' alt="Person" width='100%'
                                     style={{ borderRadius: '100% 100% 50% 50%', float: 'right' }}
@@ -130,13 +136,13 @@ function Homepage() {
                 </Container>
             </Box>
             <CusBoxImg1>
-                <img src='/petrus-app/img/tech.png' alt="leaf" width='100%'/>
+                <img src='/petrus-app/img/tech.png' alt="leaf" width='100%' />
             </CusBoxImg1>
             <Container maxWidth="lg">
-                <CusGrid container columnSpacing={2} id='section2' 
-                sx={{ 
-                    order: { xs: 1, md: 2 }, 
-                    flexDirection:{xs:'column-reverse',md:'unset'}
+                <CusGrid container columnSpacing={2} id='section2'
+                    sx={{
+                        order: { xs: 1, md: 2 },
+                        flexDirection: { xs: 'column-reverse', md: 'unset' }
                     }}  >
                     <Grid xs={12} md={6}>
                         <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_gnb0jsok.json"
@@ -150,16 +156,16 @@ function Homepage() {
                             I am a Front-End Developer
                         </Box>
                         <Box component='p'>
-                         I will be able to construct responsive websites using CSS, Flexbox and CSS Grid, develop interactive websites and UI (User Interface) applications using JavaScript and HTML, and connect a web application to backend server data using JavaScript. Students will also build competency automating application build and deployment using Webpack and improving offline performance of websites using Service Worker.
-                          </Box>
+                            I will be able to construct responsive websites using CSS, Flexbox and CSS Grid, develop interactive websites and UI (User Interface) applications using JavaScript and HTML, and connect a web application to backend server data using JavaScript. Students will also build competency automating application build and deployment using Webpack and improving offline performance of websites using Service Worker.
+                        </Box>
                     </CusGridContent>
                 </CusGrid>
             </Container>
             <Container maxWidth='false' sx={{ position: 'relative' }}>
                 <CusBoxImg2>
-                <img src='/petrus-app/img/tech.png' alt="leaf" width='100%'
-                    style={{transform: 'scaleX(-1)'}}
-                /></CusBoxImg2>
+                    <img src='/petrus-app/img/tech.png' alt="leaf" width='100%'
+                        style={{ transform: 'scaleX(-1)' }}
+                    /></CusBoxImg2>
             </Container>
             <Container maxWidth="lg">
                 <CusGrid container columnSpacing={2} sx={{ order: { xs: 1, md: 2 } }}>
@@ -168,8 +174,8 @@ function Homepage() {
                             I am a Vietnamese Calligrapher
                         </Box>
                         <Box component='p'>
-                        Calligraphy giving is a special traditional custom in Vietnam which originated from the art of writing beautifully. Like many other Vietnamese traditions, no one can tell exactly where and when it began, but anyone can tell its importance and cultural value.
-                         </Box>
+                            Calligraphy giving is a special traditional custom in Vietnam which originated from the art of writing beautifully. Like many other Vietnamese traditions, no one can tell exactly where and when it began, but anyone can tell its importance and cultural value.
+                        </Box>
                     </CusGridContent>
                     <Grid xs={12} md={6}>
                         <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_iqhd0uv0.json"

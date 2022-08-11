@@ -14,5 +14,4 @@ export const CUS_BUTTON_BLUE = styled(Button)(() => ({
     marginLeft:'10px',
     marginRight:'10px',
     minWidth:'130px',
-
 }));

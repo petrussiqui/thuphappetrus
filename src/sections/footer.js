@@ -36,7 +36,8 @@ const CusGridContent = styled(Grid)(({ theme }) => ({
     textAlign: 'center',
     justifyContent: 'stretch',
     paddingLeft: '30px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
+        flexFlow:'column',
         paddingRight: '30px',
         justifyContent: 'center',
     },
@@ -95,13 +96,16 @@ function Footer() {
                 style={{ position: 'absolute', bottom: '0', zIndex: '-1' }} />
             <Container maxWidth="xl" >
                 <CusGrid container columnSpacing={2} sx={{ alignItems: 'center' }}>
-                    <Grid xs={0} md={4} sx={{ display: { xs: 'none', md: 'unset' } }}>
+                    <Grid xs={0} sm={2} md={4} sx={{ display: { xs: 'none', sm: 'unset' } }}>
                         <hr />
                     </Grid>
-                    <Grid xs={12} md={4} sx={{
+                    <Grid xs={12} sm={8} md={4} sx={{
                         display: 'flex',
-                        justifyContent: 'center',
-                        flexFlow: 'wrap',
+                        alignItems: 'center',
+                        flexFlow: 'column',
+                        '& img': {
+                            width:{xs:'160px', md:'250px'}
+                        }
                     }}>
                         <img
                             src="/petrus-app/img/logo550tranparent.png"
@@ -110,7 +114,7 @@ function Footer() {
                         />
                         <Box component="p" sx={{ fontSize: '15px' }}>Spread Warmth and Positive Energy</Box>
                     </Grid>
-                    <Grid xs={0} md={4} sx={{ display: { xs: 'none', md: 'unset' } }}>
+                    <Grid xs={0} sm={2} md={4} sx={{ display: { xs: 'none', sm: 'unset' } }}>
                         <hr />
                     </Grid>
                 </CusGrid>

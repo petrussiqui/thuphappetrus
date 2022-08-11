@@ -1,7 +1,7 @@
-import { AppBar, Container, styled, Toolbar } from "@mui/material";
-import { Box } from "@mui/system";
+import { AppBar, Container, styled, Toolbar, Box } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import * as CusConst from '../settings/constants';
+import MobileMenu from "./mobilemenu";
 
 
 const pages = [
@@ -50,7 +50,9 @@ function Header() {
         }}>
             <Container maxWidth="lg">
                 <Toolbar disableGutters sx={{ my: 1 }}>
-                    <Box component='a' href="/petrus-app/">
+                    <Box component='a' href="/petrus-app/"
+                    sx={{'& img':{width: {xs: '70px'}} }}
+                    >
                     <img
                         src="/petrus-app/img/logo550tranparent.png"
                         alt="Logo"
@@ -65,6 +67,9 @@ function Header() {
                                 {page.pageName}
                             </CusNavLink>
                         )}
+                    </Box>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
+                        <MobileMenu />
                     </Box>
 
                 </Toolbar>
