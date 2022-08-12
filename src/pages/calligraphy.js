@@ -1,6 +1,7 @@
 import { Box, Container, ImageList, ImageListItem } from "@mui/material";
 import React from "react";
 import { CalligraphyList } from "../settings/carouselList";
+import { PRIMARY_COLOR} from "../settings/constants";
 
 
 function About() {
@@ -29,10 +30,11 @@ function About() {
                 background="transparent" speed="1" loop autoplay></lottie-player>
 
             <Container>
-            <Box component='h2'
+            <Box component='h1'
                     sx={{
                         textAlign:'center',
                         margin:'50px 0',
+                        color: PRIMARY_COLOR, 
                     }}
                 > Gallery</Box>
                 <ImageList variant="masonry" cols={3} gap={8}>

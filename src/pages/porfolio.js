@@ -56,18 +56,22 @@ function Porfolio() {
                     <Grid xs={12} md={6}>
                         <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_c1dtgznx.json"
                             background="transparent" loop autoplay></lottie-player>
-                       
                     </Grid>
                     <Grid xs={0} md={3}>
                        
                     </Grid>
                 </CusGrid>
             </Container>
+            <Box sx={{
+                background: 'rgba(58,56,61, 0.05)',
+                padding:'70px 0',
+                marginBottom:'70px'
+            }}>
             <Container maxWidth='lg'>
                 <Box component='h2'
                     sx={{
                         textAlign:'center',
-                        margin:'-50px 0 50px',
+                        margin:'0px 0 50px',
                     }}
                 > Implemented Projects</Box>
                 <Slider {...settings} className="carouselPorfolio">
@@ -81,6 +85,7 @@ function Porfolio() {
                     ))}
                 </Slider>
             </Container>
+            </Box>
         </React.Fragment>
     );
 }

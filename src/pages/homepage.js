@@ -2,8 +2,6 @@ import { Box, Button, Container, Grid, styled } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import * as CusConst from '../settings/constants';
-import { LanguagesList } from "../settings/carouselList";
-import Slider from "react-slick";
 
 //-----------------------------------------------------
 
@@ -75,35 +73,6 @@ const CusBoxImg2 = styled(Box)(({ theme }) => ({
 
 //-----------------------------------------------------
 
-const settings = {
-    dots: true,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [
-        {
-          breakpoint: 900,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-            arrows:false,
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-          }
-        },
-      ]
-
-};
 
 function Homepage() {
     return (
@@ -190,7 +159,6 @@ function Homepage() {
                             loop autoplay></lottie-player>
                     </Grid>
                     <CusGridContent xs={12} md={6} sx={{
-
                     }}>
                         <Box component='h2'>
                             I am a Front-End Developer
@@ -198,22 +166,29 @@ function Homepage() {
                         <Box component='p'>
                             I will be able to construct responsive websites using CSS, Flexbox and CSS Grid, develop interactive websites and UI (User Interface) applications using JavaScript and HTML, and connect a web application to backend server data using JavaScript. Students will also build competency automating application build and deployment using Webpack and improving offline performance of websites using Service Worker.
                         </Box>
+                        <CusButton variant="contained" sx={{ marginLeft: '0', marginRight: '0' }}>
+                            <NavLink to="/petrus-app/porfolio/">
+                                Read More
+                            </NavLink>
+                        </CusButton>
                     </CusGridContent>
                 </CusGrid>
             </Container>
-            <Container maxWidth='lg' sx={{margin:'40px 0'}}>
-                <Slider {...settings} className="carousalLanguages">
-                    {LanguagesList.map((langItem, index) => (
-                        <Box key={index} sx={{
+            {/* <Container maxWidth='lg'>
+                <Box sx={{ margin: '40px 0' }}>
+                    <Slider {...settings} className="carousalLanguages">
+                        {LanguagesList.map((langItem, index) => (
+                            <Box key={index} sx={{
                                 display: 'flex!important',
                                 justifyContent: 'center'
-                        }}>
-                            <img src={langItem.src} alt={langItem.title} width='100px' />
-                            {console.log(langItem)}
-                        </Box>
-                    ))}
-                </Slider>
-            </Container>
+                            }}>
+                                <img src={langItem.src} alt={langItem.title} width='100px' />
+                                {console.log(langItem)}
+                            </Box>
+                        ))}
+                    </Slider>
+                </Box>
+            </Container> */}
             <Container maxWidth='false' sx={{ position: 'relative' }}>
                 <CusBoxImg2>
                     <img src='/petrus-app/img/tech.png' alt="leaf" width='100%'
@@ -229,6 +204,11 @@ function Homepage() {
                         <Box component='p'>
                             Calligraphy giving is a special traditional custom in Vietnam which originated from the art of writing beautifully. Like many other Vietnamese traditions, no one can tell exactly where and when it began, but anyone can tell its importance and cultural value.
                         </Box>
+                        <CusButton variant="contained" sx={{ marginLeft: '0', marginRight: '0' }}>
+                            <NavLink to="/petrus-app/calligraphy/">
+                                Read More
+                            </NavLink>
+                        </CusButton>
                     </CusGridContent>
                     <Grid xs={12} md={6}>
                         <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_iqhd0uv0.json"

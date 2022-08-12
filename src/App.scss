@@ -35,6 +35,7 @@ h2{
   .slick-track{
     .slick-slide{
       transform: scale(.5);
+      transition: 300ms;
     }
     .slick-current + .slick-active{
       transform: scale(1);
