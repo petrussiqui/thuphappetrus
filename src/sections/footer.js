@@ -78,7 +78,7 @@ const contacts = [
     {
         icon: <EmailIcon />,
         text: 'petersiqui@gmail.com',
-        link: 'maito:petersiqui@gmail.com'
+        link: 'mailto:petersiqui@gmail.com'
     },
     {
         icon: <LocationOnIcon />,
@@ -86,8 +86,6 @@ const contacts = [
         link: 'https://goo.gl/maps/CPcdGZhyXg3EqTVL7'
     },
 ]
-
-
 
 function Footer() {
     return (

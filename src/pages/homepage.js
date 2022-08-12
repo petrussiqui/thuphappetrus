@@ -2,6 +2,10 @@ import { Box, Button, Container, Grid, styled } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import * as CusConst from '../settings/constants';
+import { LanguagesList } from "../settings/carouselList";
+import Slider from "react-slick";
+
+//-----------------------------------------------------
 
 const CusGrid = styled(Grid)(() => ({
     margin: '20px 0 20px -8px',
@@ -68,6 +72,39 @@ const CusBoxImg2 = styled(Box)(({ theme }) => ({
         top: 'unset',
     }
 }));
+
+//-----------------------------------------------------
+
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            arrows:false,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+
+};
+
 function Homepage() {
     return (
         <React.Fragment>
@@ -100,7 +137,6 @@ function Homepage() {
                                     }}>
                                 </lottie-player>
                                 <Box component='h1' sx={{
-                                    fontSize: { md: '44px', xs: '24px' },
                                     letterSpacing: { md: '3px', xs: '1px' },
                                 }}>
                                     I'm Petrus Sĩ Quí
@@ -123,10 +159,14 @@ function Homepage() {
                             alignContent: 'center',
                         }}>
                             <Box sx={{
-                                padding: { xs: '20px 20px 0px' },
+                                padding: { xs: '35px 50px 0px' },
                             }}>
                                 <img src='/petrus-app/img/me.png' alt="Person" width='100%'
-                                    style={{ borderRadius: '100% 100% 50% 50%', float: 'right' }}
+                                    style={{
+                                        clipPath: 'polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)',
+                                        // borderRadius: '100% 100% 50% 50%', 
+                                        float: 'right'
+                                    }}
                                 />
 
                             </Box>
@@ -160,6 +200,19 @@ function Homepage() {
                         </Box>
                     </CusGridContent>
                 </CusGrid>
+            </Container>
+            <Container maxWidth='lg' sx={{margin:'40px 0'}}>
+                <Slider {...settings} className="carousalLanguages">
+                    {LanguagesList.map((langItem, index) => (
+                        <Box key={index} sx={{
+                                display: 'flex!important',
+                                justifyContent: 'center'
+                        }}>
+                            <img src={langItem.src} alt={langItem.title} width='100px' />
+                            {console.log(langItem)}
+                        </Box>
+                    ))}
+                </Slider>
             </Container>
             <Container maxWidth='false' sx={{ position: 'relative' }}>
                 <CusBoxImg2>

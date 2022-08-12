@@ -4,6 +4,7 @@ import Homepage from "./pages/homepage";
 import Page404 from "./pages/page404";
 import Porfolio from "./pages/porfolio";
 import About from "./pages/about";
+import Calligraphy from "./pages/calligraphy";
 
 export default function Router() {
   let element = useRoutes([
@@ -20,6 +21,7 @@ export default function Router() {
     },
     { path: '/petrus-app/about-me', element: <About /> },
     { path: '/petrus-app/porfolio', element: <Porfolio /> },
+    { path: '/petrus-app/calligraphy', element: <Calligraphy /> },
     { path: '/petrus-app/contact', element: <Contact /> },
     { path: '/petrus-app/404', element: <Page404 /> },
     { path: '/petrus-app/*', element: <Navigate to="/petrus-app/404" replace /> },

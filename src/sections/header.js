@@ -1,46 +1,6 @@
-import { AppBar, Container, styled, Toolbar, Box } from "@mui/material";
-import { NavLink } from "react-router-dom";
-import * as CusConst from '../settings/constants';
+import { AppBar, Container, Toolbar, Box } from "@mui/material";
+import Menu from "./menu";
 import MobileMenu from "./mobilemenu";
-
-
-const pages = [
-    { pageLink: '/petrus-app/', pageName: 'Home' },
-    { pageLink: '/petrus-app/about-me', pageName: 'About Me' },
-    { pageLink: '/petrus-app/porfolio/', pageName: 'Porfolio' },
-    { pageLink: '/petrus-app/contact/', pageName: 'Contact' },
-];
-const CusNavLink = styled(NavLink)(() => ({
-    padding: '10px',
-    textDecoration: 'none',
-    color: CusConst.SECONDAEY_COLOR,
-    display: 'block',
-    marginLeft:'40px',
-    "&:after": {
-        display: 'block',
-        content: '""',
-        borderBottom: `2px solid ${CusConst.SECONDAEY_COLOR}`,
-        color: CusConst.SECONDAEY_COLOR,
-        transition: 'transform 250ms ease-in-out',
-        transform: 'scaleX(0)',
-        position: 'relative',
-        bottom: '-10px',
-        marginLeft: '-10px',
-        marginRight: '-10px',
-    },
-    "&.active": {
-        color: CusConst.SECONDAEY_COLOR,
-        "&:after": {
-            transform: 'scaleX(1)',
-        }
-    },
-    "&:hover": {
-        color: CusConst.SECONDAEY_COLOR,
-        "&:after": {
-            transform: 'scaleX(1)',
-        }
-    }
-}));
 
 function Header() {
     return (
@@ -51,22 +11,14 @@ function Header() {
             <Container maxWidth="lg">
                 <Toolbar disableGutters sx={{ my: 1 }}>
                     <Box component='a' href="/petrus-app/"
-                    sx={{'& img':{width: {xs: '70px'}} }}
+                    sx={{'& img':{width: {xs: '70px', sm:'100px' }} }}
                     >
                     <img
                         src="/petrus-app/img/logo550tranparent.png"
                         alt="Logo"
-                        width='100px'
                     /></Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-                        {pages.map((page) =>
-                            <CusNavLink
-                                key={page.pageName}
-                                to={page.pageLink}
-                            >
-                                {page.pageName}
-                            </CusNavLink>
-                        )}
+                        <Menu/>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
                         <MobileMenu />

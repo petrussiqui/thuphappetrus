@@ -20,7 +20,7 @@ const CusIconButton = styled(IconButton)(() => ({
 const CusBox = styled(Box)(({ theme }) => ({
     width: '350px',
     [theme.breakpoints.down('md')]: {
-        width: '50vw',
+        width: '80vw',
     }
 }))
 const CusDrawer = styled(Drawer)(({ theme }) => ({
