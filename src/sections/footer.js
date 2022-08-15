@@ -8,6 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import React from "react";
+import {MessengerFB} from "./messengerFB";
 
 
 const CusGrid = styled(Grid)(() => ({
@@ -152,6 +153,7 @@ function Footer() {
                     </CusGridContent>
                 </CusGrid>
             </Container>
+   <MessengerFB/>
         </Box>
     );
 }

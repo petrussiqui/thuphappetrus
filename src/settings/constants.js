@@ -6,6 +6,7 @@ export const SECONDAEY_COLOR = '#18B8C6';
 export const THIRD_COLOR = '#9CE2EA';
 export const TEXT_COLOR = '#3A383D';
 export const ACCENT_COLOR = '#231F20';
+export const OPPOSITE_COLOR = '#DC4C41';
 
 
 export const CUS_BUTTON_BLUE = styled(Button)(() => ({

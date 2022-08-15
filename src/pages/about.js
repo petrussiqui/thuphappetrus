@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Container, Grid, styled } from "@mui/material";
+import { Box, Container} from "@mui/material";
 import { LanguagesList } from "../settings/carouselList";
 import Slider from "react-slick";
+import LazyLoad from 'react-lazyload';
 import { PRIMARY_COLOR } from "../settings/constants";
 import MyTimeline from "../sections/timeline";
 
@@ -39,24 +40,26 @@ function About() {
     return (
         <React.Fragment>
             <img src="/petrus-app/img/banner.png" alt="banner" width='100%' />
-            <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_d4xlubji.json"
-                style={{
-                    position: 'absolute',
-                    height: ' 100%',
-                    top: '0',
-                    right: '0',
-                    width: '170%',
-                }} class="Hidden-Mobile"
-                background="transparent" speed="1" loop autoplay></lottie-player>
-            <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_d4xlubji.json"
-                style={{
-                    position: 'absolute',
-                    height: ' 100%',
-                    top: '0',
-                    left: '0',
-                    width: '170%',
-                }} class="Hidden-Mobile"
-                background="transparent" speed="1" loop autoplay></lottie-player>
+            <LazyLoad>
+                <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_d4xlubji.json"
+                    style={{
+                        position: 'absolute',
+                        height: ' 100%',
+                        top: '0',
+                        right: '0',
+                        width: '170%',
+                    }} class="Hidden-Mobile"
+                    background="transparent" speed="1" loop autoplay></lottie-player>
+                <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_d4xlubji.json"
+                    style={{
+                        position: 'absolute',
+                        height: ' 100%',
+                        top: '0',
+                        left: '0',
+                        width: '170%',
+                    }} class="Hidden-Mobile"
+                    background="transparent" speed="1" loop autoplay></lottie-player>
+            </LazyLoad>
             <Container maxWidth="lg" sx={{
                 display: 'flex',
                 justifyContent: 'center',
@@ -75,7 +78,7 @@ function About() {
             <Container maxWidth="lg" sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                padding: '0 0 70px' ,
+                padding: '0 0 70px',
             }}>
                 <Box sx={{ width: { md: '70%', xs: '100%' } }}>
                     <Box component='h2'
@@ -84,12 +87,12 @@ function About() {
                             margin: '30px 0',
                             color: PRIMARY_COLOR,
                         }}>
-                            Petrus Sĩ Quí
+                        Petrus Sĩ Quí
                     </Box>
-                    <Box component='p' sx={{ textAlign: 'center', lineHeight:'1.6em' }}>
-                    I’m 23 years old and I’m single. I have just graduated from university in June with the major in computer science. I got 4 month experience as an inter at A company, 6 month experience as an junior at B company and 9 month experience as an junior at B company . I like reading books and cooking. I’m a careful and hard-working person. I’m eager to learn new things and willing to work in team. I easily adapt to with new working environment and take initiative in work.
+                    <Box component='p' sx={{ textAlign: 'center', lineHeight: '1.6em' }}>
+                        I’m 23 years old and I’m single. I have just graduated from university in June with the major in computer science. I got 4 month experience as an intern at DT University, 6 month experience as an junior at VTTech company and 9 month experience as an junior at JAY company . I like reading books and cooking. I’m a careful and hard-working person. I’m eager to learn new things and willing to work in team. I easily adapt to with new working environment and take initiative in work.
                     </Box>
-                    <Box component='p' sx={{ textAlign: 'center', lineHeight:'1.6em'}}>
+                    <Box component='p' sx={{ textAlign: 'center', lineHeight: '1.6em' }}>
                         Passionate font-end developer with 1.5+ years of hands-on experience in developing website
                         using a wide range of front end and back end skills like HTML5, CSS3, JS, Asp.Net MVC5, C#, SQL, MySQL, etc.
                         Developed 20+ website. Looking to futher enhance programming skills as the future full stack developer.
@@ -128,13 +131,13 @@ function About() {
                 marginBottom: '70px'
             }}>
                 <Box component='h2'
-                        sx={{
-                            textAlign: 'center',
-                            margin: '0px 0 50px',
-                            color: PRIMARY_COLOR,
-                        }}
-                    >My Timeline</Box>
-               <MyTimeline/>
+                    sx={{
+                        textAlign: 'center',
+                        margin: '0px 0 50px',
+                        color: PRIMARY_COLOR,
+                    }}
+                >My Timeline</Box>
+                <MyTimeline />
             </Container>
 
         </React.Fragment>
