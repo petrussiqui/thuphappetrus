@@ -8,7 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import React from "react";
-import {MessengerFB} from "./messengerFB";
+// import {MessengerFB} from "./messengerFB";
 
 
 const CusGrid = styled(Grid)(() => ({
@@ -20,9 +20,9 @@ const CusGrid = styled(Grid)(() => ({
 }));
 const CusIconButton = styled(IconButton)(() => ({
     marginBottom: '50px',
-    color:CusConst.SECONDAEY_COLOR,
+    color: CusConst.SECONDAEY_COLOR,
     '&.MuiSvgIcon-root': {
-        
+
     },
 
 }));
@@ -38,13 +38,13 @@ const CusGridContent = styled(Grid)(({ theme }) => ({
     justifyContent: 'stretch',
     paddingLeft: '30px',
     [theme.breakpoints.down('md')]: {
-        flexFlow:'column',
+        flexFlow: 'column',
         paddingRight: '30px',
         justifyContent: 'center',
     },
     '& h3': {
         fontSize: '20px',
-        color: CusConst.ACCENT_COLOR,
+        color: CusConst.TEXT_COLOR,
         marginBottom: '20px',
         [theme.breakpoints.down('sm')]: {
             textAlign: 'center',
@@ -60,9 +60,9 @@ const CusGridContent = styled(Grid)(({ theme }) => ({
     '& a': {
         fontSize: '15px',
         lineHeight: '1.6em',
-        textDecoration:'none',
-        '& span':{
-        color:CusConst.TEXT_COLOR,
+        textDecoration: 'none',
+        '& span': {
+            color: CusConst.TEXT_COLOR,
         }
     },
 }));
@@ -73,7 +73,7 @@ const contacts = [
 
     {
         icon: <LocalPhoneRoundedIcon />,
-        text: '0939 800 713',
+        text: '0939 800 xxx',
         link: 'tel:0939800713'
     },
     {
@@ -95,15 +95,15 @@ function Footer() {
                 style={{ position: 'absolute', bottom: '0', zIndex: '-1' }} />
             <Container maxWidth="xl" >
                 <CusGrid container columnSpacing={2} sx={{ alignItems: 'center' }}>
-                    <Grid xs={0} sm={2} md={4} sx={{ display: { xs: 'none', sm: 'unset' } }}>
+                    <Grid item xs={0} sm={2} md={4} sx={{ display: { xs: 'none', sm: 'unset' } }}>
                         <hr />
                     </Grid>
-                    <Grid xs={12} sm={8} md={4} sx={{
+                    <Grid item xs={12} sm={8} md={4} sx={{
                         display: 'flex',
                         alignItems: 'center',
                         flexFlow: 'column',
                         '& img': {
-                            width:{xs:'160px', md:'250px'}
+                            width: { xs: '160px', md: '250px' }
                         }
                     }}>
                         <img
@@ -113,7 +113,7 @@ function Footer() {
                         />
                         <Box component="p" sx={{ fontSize: '15px' }}>Spread Warmth and Positive Energy</Box>
                     </Grid>
-                    <Grid xs={0} sm={2} md={4} sx={{ display: { xs: 'none', sm: 'unset' } }}>
+                    <Grid item xs={0} sm={2} md={4} sx={{ display: { xs: 'none', sm: 'unset' } }}>
                         <hr />
                     </Grid>
                 </CusGrid>
@@ -121,12 +121,12 @@ function Footer() {
             <Container maxWidth="lg" >
                 <CusGrid container columnSpacing={2} sx={{ alignItems: 'flex-start', marginTop: { md: '-90px', xs: '0' }, paddingBottom: { md: '50px', xs: '0px' } }}>
 
-                    <CusGridContent xs={12} md={4}>
+                    <CusGridContent item xs={12} md={4}>
                         <Box component="h3">Contact</Box>
                         <List>
                             {contacts.map((contact, index) =>
-                                <Box component='a' href={contact.link}>
-                                    <ListItem key={index} >
+                                <Box component='a' href={contact.link} key={index}>
+                                    <ListItem>
                                         <CusListItemIcon>
                                             {contact.icon}
                                         </CusListItemIcon>
@@ -136,11 +136,10 @@ function Footer() {
                             )}
                         </List>
                     </CusGridContent>
-                    <Grid xs={0} md={4}>
+                    <Grid item xs={0} md={4}>
                     </Grid>
-                    <CusGridContent xs={12} md={4} sx={{
-
-                    }}><Box component="h3">Social</Box>
+                    <CusGridContent item xs={12} md={4} sx={{}}>
+                        <Box component="h3">Social</Box>
                         <CusIconButton aria-label="Facebook" href='https://fb.com' target='_blank'>
                             <FacebookRoundedIcon></FacebookRoundedIcon>
                         </CusIconButton>
@@ -153,7 +152,6 @@ function Footer() {
                     </CusGridContent>
                 </CusGrid>
             </Container>
-   <MessengerFB/>
         </Box>
     );
 }

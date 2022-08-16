@@ -7,11 +7,11 @@ import "./hook.scss"
 import Ex2 from "./Ex2"
 import Ex3 from "./Ex3"
 // import Ex4 from "./Ex4";
-import Ex5 from "./Ex5";
-import Ex6 from "./Ex6";
-import Ex7 from "./Ex7";
-import Ex8 from "./Ex8";
-import Section10 from "./Section10";
+// import Ex5 from "./Ex5";
+// import Ex6 from "./Ex6";
+// import Ex7 from "./Ex7";
+// import Ex8 from "./Ex8";
+// import Section10 from "./Section10";
 //useState basic
 function Ex1() {
     // // component sẽ run lại sau khi gọi lại handle 
@@ -29,17 +29,17 @@ function Ex1() {
     const hookEx = useMemo(() => {
         return (
             <>
-                <Section10 />
+                {/* <Section10 />
                 <Ex6 />
                 <Ex5 />
                 <Ex7 />
-                <Ex3 />
+                <Ex3 /> */}
             </>
         )
     }, []);
     return (
         <>
-        <Ex8 />
+        {/* <Ex8 /> */}
         <div className="newSession">
             {/* <h1> {counter} </h1>
             <button onClick={handle}>Increase</button> */}

@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Container} from "@mui/material";
+import { Box, Container, ImageList, ImageListItem} from "@mui/material";
 import { LanguagesList } from "../settings/carouselList";
 import Slider from "react-slick";
 import LazyLoad from 'react-lazyload';
 import { PRIMARY_COLOR } from "../settings/constants";
 import MyTimeline from "../sections/timeline";
+import { CalligraphyList } from "../settings/carouselList";
+import '../styles/Animation.css'
 
 const settings = {
     dots: true,
@@ -48,7 +50,7 @@ function About() {
                         top: '0',
                         right: '0',
                         width: '170%',
-                    }} class="Hidden-Mobile"
+                    }} class="Hidden-Mobile animate__animated animate__fadeInUp"
                     background="transparent" speed="1" loop autoplay></lottie-player>
                 <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_d4xlubji.json"
                     style={{
@@ -57,14 +59,14 @@ function About() {
                         top: '0',
                         left: '0',
                         width: '170%',
-                    }} class="Hidden-Mobile"
+                    }} class="Hidden-Mobile animate__animated animate__fadeInUp"
                     background="transparent" speed="1" loop autoplay></lottie-player>
             </LazyLoad>
             <Container maxWidth="lg" sx={{
                 display: 'flex',
                 justifyContent: 'center',
             }}>
-                <Box sx={{
+                <Box className='animate__animated animate__zoomIn' sx={{
                     marginTop: '-100px',
                     width: { md: '300px', xs: '150px' },
                 }}>
@@ -119,7 +121,7 @@ function About() {
                                     justifyContent: 'center'
                                 }}>
                                     <img src={langItem.src} alt={langItem.title} width='100px' />
-                                    {console.log(langItem)}
+                                   
                                 </Box>
                             ))}
                         </Slider>
@@ -127,8 +129,7 @@ function About() {
                 </Container>
             </Box>
             <Container maxWidth="lg" sx={{
-                padding: '70px 0',
-                marginBottom: '70px'
+                padding: '70px 0'
             }}>
                 <Box component='h2'
                     sx={{
@@ -139,7 +140,28 @@ function About() {
                 >My Timeline</Box>
                 <MyTimeline />
             </Container>
-
+            <Container maxWidth="lg" sx={{
+                padding: ' 0 0 50px',
+                marginBottom: '50px'
+            }}>
+                 <Box component='h2'
+                    sx={{
+                        textAlign:'center',
+                        margin:'50px 0',
+                    }} className='animate__animated animate__fadeIn'
+                > Gallery</Box>
+            <ImageList variant="masonry" cols={3} gap={8}>
+                    {CalligraphyList.map((item) => (
+                        <ImageListItem key={item.src}>
+                            <img
+                                src={`${item.src}?w=248&fit=crop&auto=format`}
+                                srcSet={`${item.src}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList></Container>
         </React.Fragment>
     );
 }

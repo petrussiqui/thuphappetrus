@@ -2,6 +2,7 @@ import { Box, Button, Container, Grid, styled } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import * as CusConst from '../settings/constants';
+import '../styles/Animation.css'
 
 //-----------------------------------------------------
 
@@ -10,7 +11,7 @@ const CusGrid = styled(Grid)(() => ({
     "& h1": {
         textAlign: 'center',
         marginTop: '-20px',
-        color: CusConst.ACCENT_COLOR,
+        color: CusConst.TEXT_COLOR,
     },
 }));
 //Custom Tag with scss and responsive
@@ -26,7 +27,7 @@ const CusGridContent = styled(Grid)(({ theme }) => ({
     },
     '& h2': {
         fontSize: '28px',
-        color: CusConst.ACCENT_COLOR,
+        color: CusConst.TEXT_COLOR,
         marginBottom: '20px',
         [theme.breakpoints.down('sm')]: {
             textAlign: 'center',
@@ -91,7 +92,7 @@ function Homepage() {
                         minHeight: { xs: 'none', md: '75vh' },
                         flexDirection: { xs: 'column-reverse', md: 'unset' }
                     }}>
-                        <Grid xs={12} md={7}
+                        <Grid item xs={12} md={7}
                             sx={{
                                 display: 'flex',
                                 flexFlow: 'wrap',
@@ -111,7 +112,7 @@ function Homepage() {
                                     I'm Petrus Sĩ Quí
                                 </Box>
                                 <Box sx={{ textAlign: 'center' }}>
-                                    <CusButton componentType='a' variant="contained" href="#section2">
+                                    <CusButton componenttype='a' variant="contained" href="#section2">
                                         Read More
                                     </CusButton>
                                     <CusButton variant="contained">
@@ -122,18 +123,17 @@ function Homepage() {
                                 </Box>
                             </Box>
                         </Grid>
-                        <Grid xs={12} md={5} sx={{
+                        <Grid item xs={12} md={5} sx={{
                             display: 'flex',
                             flexFlow: 'wrap',
                             alignContent: 'center',
                         }}>
-                            <Box sx={{
+                            <Box className='animate__animated animate__zoomIn' sx={{
                                 padding: { xs: '35px 50px 0px' },
                             }}>
                                 <img src='/petrus-app/img/me.png' alt="Person" width='100%'
                                     style={{
                                         clipPath: 'polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)',
-                                        // borderRadius: '100% 100% 50% 50%', 
                                         float: 'right'
                                     }}
                                 />
@@ -153,12 +153,12 @@ function Homepage() {
                         order: { xs: 1, md: 2 },
                         flexDirection: { xs: 'column-reverse', md: 'unset' }
                     }}  >
-                    <Grid xs={12} md={6}>
+                    <Grid item xs={12} md={6}>
                         <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_gnb0jsok.json"
                             background="transparent" speed="1"
                             loop autoplay></lottie-player>
                     </Grid>
-                    <CusGridContent xs={12} md={6} sx={{
+                    <CusGridContent item xs={12} md={6} sx={{
                     }}>
                         <Box component='h2'>
                             I am a Front-End Developer
@@ -197,7 +197,7 @@ function Homepage() {
             </Container>
             <Container maxWidth="lg">
                 <CusGrid container columnSpacing={2} sx={{ order: { xs: 1, md: 2 } }}>
-                    <CusGridContent xs={12} md={6} >
+                    <CusGridContent item xs={12} md={6} >
                         <Box component='h2'>
                             I am a Vietnamese Calligrapher
                         </Box>
@@ -210,7 +210,7 @@ function Homepage() {
                             </NavLink>
                         </CusButton>
                     </CusGridContent>
-                    <Grid xs={12} md={6}>
+                    <Grid item xs={12} md={6}>
                         <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_iqhd0uv0.json"
                             background="transparent" speed="1"
                             loop autoplay></lottie-player>
