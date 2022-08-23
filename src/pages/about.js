@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, ImageList, ImageListItem} from "@mui/material";
+import { Box, Container, Grid, ImageList, ImageListItem, styled} from "@mui/material";
 import { LanguagesList } from "../settings/carouselList";
 import Slider from "react-slick";
 import LazyLoad from 'react-lazyload';
@@ -7,6 +7,14 @@ import { PRIMARY_COLOR } from "../settings/constants";
 import MyTimeline from "../sections/timeline";
 import { CalligraphyList } from "../settings/carouselList";
 import '../styles/Animation.css'
+
+
+
+const CusGrid = styled(Grid)(() => ({
+    marginTop: '20px',
+    marginBottom: '20px',
+}));
+
 
 const settings = {
     dots: true,
@@ -91,10 +99,10 @@ function About() {
                         }}>
                         Petrus Sĩ Quí
                     </Box>
-                    <Box component='p' sx={{ textAlign: 'center', lineHeight: '1.6em' }}>
+                    <Box component='p' sx={{ textAlign: 'center', lineHeight: '1.6em', padding: '0 20px', }}>
                         I’m 23 years old and I’m single. I have just graduated from university in June with the major in computer science. I got 4 month experience as an intern at DT University, 6 month experience as an junior at VTTech company and 9 month experience as an junior at JAY company . I like reading books and cooking. I’m a careful and hard-working person. I’m eager to learn new things and willing to work in team. I easily adapt to with new working environment and take initiative in work.
                     </Box>
-                    <Box component='p' sx={{ textAlign: 'center', lineHeight: '1.6em' }}>
+                    <Box component='p' sx={{ textAlign: 'center', lineHeight: '1.6em', padding: '0 20px',}}>
                         Passionate font-end developer with 1.5+ years of hands-on experience in developing website
                         using a wide range of front end and back end skills like HTML5, CSS3, JS, Asp.Net MVC5, C#, SQL, MySQL, etc.
                         Developed 20+ website. Looking to futher enhance programming skills as the future full stack developer.
@@ -140,14 +148,46 @@ function About() {
                 >My Timeline</Box>
                 <MyTimeline />
             </Container>
+            <Box sx={{
+                background: 'rgba(58,56,61, 0.05)',
+                padding: '70px 0',
+            }}>
+                <Container maxWidth='lg'>
+                    <Box component='h2'
+                        sx={{
+                            textAlign: 'center',
+                            margin: '0px 0 50px',
+                        }}
+                    >My Hobbies</Box>
+                    <CusGrid container columnSpacing={2} sx={{ order: { xs: 1, md: 2 } }}>
+                    <Grid item xs={6} md={3}>
+                        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_1tnov7hf.json"
+                            background="transparent" loop autoplay></lottie-player>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_4rq0nvpt.json"
+                            background="transparent" loop autoplay></lottie-player>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_cPIWGr.json"
+                            background="transparent" loop autoplay></lottie-player>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_s1vnsihd.json"
+                            background="transparent" loop autoplay></lottie-player>
+                    </Grid>
+                </CusGrid>
+                </Container>
+            </Box>
             <Container maxWidth="lg" sx={{
-                padding: ' 0 0 50px',
-                marginBottom: '50px'
+                padding: '70px 0',
+                marginBottom: '0px'
             }}>
                  <Box component='h2'
                     sx={{
                         textAlign:'center',
                         margin:'50px 0',
+                        color: PRIMARY_COLOR,
                     }} className='animate__animated animate__fadeIn'
                 > Gallery</Box>
             <ImageList variant="masonry" cols={3} gap={8}>
@@ -161,7 +201,23 @@ function About() {
                             />
                         </ImageListItem>
                     ))}
-                </ImageList></Container>
+                </ImageList>
+               
+                </Container>
+                <Container maxWidth='lg'>
+                    <CusGrid container columnSpacing={2} sx={{ order: { xs: 1, md: 2 } }}>
+                    <Grid item xs={0} md={4}>
+                        
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_07PkRX.json"
+                            background="transparent" loop autoplay></lottie-player>
+                    </Grid>
+                    <Grid item xs={0} md={4}>
+                       
+                    </Grid>
+                </CusGrid>
+                </Container>
         </React.Fragment>
     );
 }

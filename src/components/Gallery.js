@@ -136,7 +136,7 @@ const itemData = [
         title: 'Lặng - Wood',
         type: 'others',
     },
-    
+
 
 ];
 function Gallery({ filter }) {
@@ -148,22 +148,23 @@ function Gallery({ filter }) {
     }, [filter]);
     return (
         <ImageList sx={{ width: '100%' }} cols={3}>
-            {dataFilter.map((item) => (
-                <ImageListItem key={item.img}>
-                    <img
-                        src={item.img}
-                        srcSet={item.img}
-                        alt={item.title}
-                        loading="lazy"
-                    />
-                    {/* <img
+           
+                {dataFilter.map((item) => (
+                    <ImageListItem key={item.img}>
+                        <img
+                            src={item.img}
+                            srcSet={item.img}
+                            alt={item.title}
+                            loading="lazy"
+                        />
+                        {/* <img
                         src={`${item.img}?w=250&h=250&fit=crop&auto=format`}
                         srcSet={`${item.img}?w=250&h=250&fit=crop&auto=format&dpr=2 1x`}
                         alt={item.title}
                         loading="lazy"
                     /> */}
-                </ImageListItem>
-            ))}
+                    </ImageListItem>
+                ))}
         </ImageList>
     );
 }

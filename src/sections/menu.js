@@ -14,14 +14,14 @@ const pages = [
 const CusNavLink = styled(NavLink)(() => ({
     padding: '10px',
     textDecoration: 'none',
-    color: CusConst.SECONDAEY_COLOR,
+    color: CusConst.SECONDARY_COLOR,
     display: 'block',
     marginLeft:'40px',
     "&:after": {
         display: 'block',
         content: '""',
-        borderBottom: `2px solid ${CusConst.SECONDAEY_COLOR}`,
-        color: CusConst.SECONDAEY_COLOR,
+        borderBottom: `2px solid ${CusConst.SECONDARY_COLOR}`,
+        color: CusConst.SECONDARY_COLOR,
         transition: 'transform 250ms ease-in-out',
         transform: 'scaleX(0)',
         position: 'relative',
@@ -30,13 +30,13 @@ const CusNavLink = styled(NavLink)(() => ({
         marginRight: '-10px',
     },
     "&.active": {
-        color: CusConst.SECONDAEY_COLOR,
+        color: CusConst.SECONDARY_COLOR,
         "&:after": {
             transform: 'scaleX(1)',
         }
     },
     "&:hover": {
-        color: CusConst.SECONDAEY_COLOR,
+        color: CusConst.SECONDARY_COLOR,
         "&:after": {
             transform: 'scaleX(1)',
         }

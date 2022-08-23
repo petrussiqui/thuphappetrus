@@ -1,17 +1,21 @@
 import * as React from 'react';
 import { useState } from 'react';
 import WidgetsRoundedIcon from '@mui/icons-material/WidgetsRounded';
-import { IconButton, List, Box, Drawer, styled } from '@mui/material';
+import { IconButton, List, Box, Drawer, styled, ButtonGroup, Button } from '@mui/material';
 import Menu from './menu';
 import * as CusConst from '../settings/constants';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { useDispatch } from "react-redux";
+import { en } from '../languages/en';
+import { vn } from '../languages/vn';
+import { changeLang } from "../store/actions/appActions";
 
 
 const CusIconButton = styled(IconButton)(() => ({
     marginBottom: '50px',
-    color: CusConst.SECONDAEY_COLOR,
+    color: CusConst.SECONDARY_COLOR,
     '&.MuiSvgIcon-root': {
 
     },
@@ -45,6 +49,20 @@ const CusDrawer = styled(Drawer)(({ theme }) => ({
 }))
 
 export default function MobileMenu() {
+    const dispatch = useDispatch()
+    const handleChange = (newLangCode, newLangLibrary) => {
+        setState(!state);
+        dispatch(
+            changeLang({
+              langCode: newLangCode,
+              langLibrary: newLangLibrary,
+            })
+          );
+        localStorage.setItem("langCode", newLangCode);
+    }
+
+
+
     const [state, setState] = useState(false);
 
     const toggleDrawer = () => (e) => {
@@ -57,7 +75,7 @@ export default function MobileMenu() {
     return (
         <React.Fragment>
             <IconButton onClick={toggleDrawer()}
-                sx={{ color: CusConst.SECONDAEY_COLOR }}
+                sx={{ color: CusConst.SECONDARY_COLOR }}
             >
                 <WidgetsRoundedIcon></WidgetsRoundedIcon>
             </IconButton>
@@ -80,6 +98,11 @@ export default function MobileMenu() {
                     justifyContent: 'stretch',
                     padding: '0px 5px',
                 }}>
+                    <ButtonGroup variant="text" aria-label="text button group" sx={{'& button':{ color: CusConst.SECONDARY_COLOR, borderColor: `${CusConst.SECONDARY_COLOR}!important`}}}>
+                            <Button onClick={() => handleChange('en', en)}>EN</Button>
+                            <Button onClick={() => handleChange('vn', vn)}>VN</Button>
+                        </ButtonGroup>
+                        <br/>
                     <CusIconButton aria-label="Facebook" href='https://fb.com' target='_blank'>
                         <FacebookRoundedIcon></FacebookRoundedIcon>
                     </CusIconButton>

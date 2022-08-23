@@ -1,95 +1,237 @@
 import * as React from 'react';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
-import Typography from '@mui/material/Typography';
+import {
+  Timeline, 
+  TimelineItem,
+  TimelineSeparator,
+  TimelineContent,
+  TimelineOppositeContent,
+  TimelineDot,
+  TimelineConnector
+} from '@mui/lab';
+
+import { PRIMARY_COLOR } from '../settings/constants';
+import {Typography, styled } from '@mui/material';
+import ApartmentRoundedIcon from '@mui/icons-material/ApartmentRounded';
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
+import StoreRoundedIcon from '@mui/icons-material/StoreRounded';
+import CoffeeRoundedIcon from '@mui/icons-material/CoffeeRounded';
+import CakeRoundedIcon from '@mui/icons-material/CakeRounded';
+import LaptopMacRoundedIcon from '@mui/icons-material/LaptopMacRounded';
+
+
+
+const CusTimelineDot = styled(TimelineDot)({
+  background: PRIMARY_COLOR,
+})
+const CusTimelineConnector = styled(TimelineConnector)({
+  //background: PRIMARY_COLOR,
+})
+const CusTimelineContent = styled(TimelineContent)({
+ // background: PRIMARY_COLOR,
+})
 
 export default function MyTimeline() {
   return (
     <Timeline position="alternate">
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          align="right"
-          variant="body2"
-          color="text.secondary"
-        >
-          9:30 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot>
-            <FastfoodIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            Eat
-          </Typography>
-          <Typography>Because you need strength</Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
+     <TimelineItem>
         <TimelineOppositeContent
           sx={{ m: 'auto 0' }}
           variant="body2"
           color="text.secondary"
         >
-          10:00 am
+          2022
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot color="primary">
-            <LaptopMacIcon />
-          </TimelineDot>
-          <TimelineConnector />
+          <CusTimelineConnector />
+          <CusTimelineDot>
+            <ApartmentRoundedIcon />
+          </CusTimelineDot>
+          <CusTimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
+        <CusTimelineContent sx={{ py: 3, px: 2 }}>
           <Typography variant="h6" component="span">
-            Code
+           Jr Frontend ReactJS Development
           </Typography>
-          <Typography>Because it&apos;s awesome!</Typography>
-        </TimelineContent>
+          <Typography>
+           SPLabs CO., LTD
+          </Typography>
+        </CusTimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+         2021 - 2022
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <CusTimelineConnector />
+          <CusTimelineDot>
+            <ApartmentRoundedIcon />
+          </CusTimelineDot>
+          <CusTimelineConnector />
+        </TimelineSeparator>
+        <CusTimelineContent sx={{ py: 3, px: 2 }}>
+          <Typography variant="h6" component="span">
+           Sr Frontend Development
+          </Typography>
+          <Typography>
+            JAY Branding CO., LTD
+          </Typography>
+        </CusTimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          2021
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <CusTimelineConnector />
+          <CusTimelineDot>
+            <ApartmentRoundedIcon />
+          </CusTimelineDot>
+          <CusTimelineConnector />
+        </TimelineSeparator>
+        <CusTimelineContent sx={{ py: 3, px: 2 }}>
+          <Typography variant="h6" component="span">
+           Jr Frontend Development
+          </Typography>
+          <Typography>
+           VTTech Solution CO., LTD
+          </Typography>
+        </CusTimelineContent>
       </TimelineItem>
       <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          2020
+        </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot color="primary" variant="outlined">
-            <HotelIcon />
-          </TimelineDot>
-          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+          <CusTimelineConnector />
+          <CusTimelineDot>
+            <StoreRoundedIcon />
+          </CusTimelineDot>
+          <CusTimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            Sleep
+        <CusTimelineContent sx={{ py: 3, px: 2 }}>
+        <Typography variant="h6" component="span">
+            Owner
           </Typography>
-          <Typography>Because you need rest</Typography>
-        </TimelineContent>
+          <Typography>
+            Calligraphy Shop 
+          </Typography>
+        </CusTimelineContent>
       </TimelineItem>
+
       <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          2020
+        </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-          <TimelineDot color="secondary">
-            <RepeatIcon />
-          </TimelineDot>
-          <TimelineConnector />
+          <CusTimelineConnector />
+          <CusTimelineDot>
+            <CoffeeRoundedIcon />
+          </CusTimelineDot>
+          <CusTimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            Repeat
+        <CusTimelineContent sx={{ py: 3, px: 2 }}>
+        <Typography variant="h6" component="span">
+            Manager
           </Typography>
-          <Typography>Because this is the life you love!</Typography>
-        </TimelineContent>
+          <Typography>
+            Coffee Shop 
+          </Typography>
+        </CusTimelineContent>
       </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          2019
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <CusTimelineConnector />
+          <CusTimelineDot>
+            <LaptopMacRoundedIcon />
+          </CusTimelineDot>
+          <CusTimelineConnector />
+        </TimelineSeparator>
+        <CusTimelineContent sx={{ py: 3, px: 2 }}>
+        <Typography variant="h6" component="span">
+           Intern Fullstack Development
+          </Typography>
+          <Typography>
+            Dong Thap University
+          </Typography>
+        </CusTimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          2015 - 2019
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <CusTimelineConnector />
+          <CusTimelineDot>
+            <SchoolRoundedIcon />
+          </CusTimelineDot>
+          <CusTimelineConnector />
+        </TimelineSeparator>
+        <CusTimelineContent sx={{ py: 3, px: 2 }}>
+        <Typography variant="h6" component="span">
+           Computer Science
+          </Typography>
+          <Typography>
+            Dong Thap University
+          </Typography>
+        </CusTimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          1997
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <CusTimelineConnector />
+          <CusTimelineDot>
+            <CakeRoundedIcon />
+          </CusTimelineDot>
+          <CusTimelineConnector />
+        </TimelineSeparator>
+        <CusTimelineContent sx={{ py: 3, px: 2 }}>
+        <Typography variant="h6" component="span">
+        Year of birth
+          </Typography>
+          <Typography>
+            
+          </Typography>
+        </CusTimelineContent>
+      </TimelineItem>
+     
     </Timeline>
   );
 }

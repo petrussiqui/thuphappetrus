@@ -76,6 +76,7 @@ const CusBoxImg2 = styled(Box)(({ theme }) => ({
 
 
 function Homepage() {
+    
     return (
         <React.Fragment>
             <Box sx={{
@@ -96,7 +97,7 @@ function Homepage() {
                             sx={{
                                 display: 'flex',
                                 flexFlow: 'wrap',
-                                alignContent: 'center',
+                                alignContent: 'center',justifyContent: 'center',
                             }}>
                             <Box>
                                 <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_eusamc.json"
@@ -109,7 +110,8 @@ function Homepage() {
                                 <Box component='h1' sx={{
                                     letterSpacing: { md: '3px', xs: '1px' },
                                 }}>
-                                    I'm Petrus Sĩ Quí
+                                    I'm Petrus Sĩ Quí<br></br>
+                                     {/* {langLibary.calligraphy}  */}
                                 </Box>
                                 <Box sx={{ textAlign: 'center' }}>
                                     <CusButton componenttype='a' variant="contained" href="#section2">

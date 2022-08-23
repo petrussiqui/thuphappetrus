@@ -1,6 +1,6 @@
 import { Box, Container, Tabs, Tab } from "@mui/material";
 import React from "react";
-import { PRIMARY_COLOR, SECONDAEY_COLOR } from "../settings/constants";
+import { PRIMARY_COLOR, SECONDARY_COLOR } from "../settings/constants";
 import CropOriginalRoundedIcon from '@mui/icons-material/CropOriginalRounded';
 import ContentPasteRoundedIcon from '@mui/icons-material/ContentPasteRounded';
 import BubbleChartRoundedIcon from '@mui/icons-material/BubbleChartRounded';
@@ -8,9 +8,11 @@ import AbcRoundedIcon from '@mui/icons-material/AbcRounded';
 import CollectionsBookmarkRoundedIcon from '@mui/icons-material/CollectionsBookmarkRounded';
 import '../styles/Animation.css'
 import Gallery from "../components/Gallery";
+import { useSelector } from "react-redux";
 
 
 function About() {
+    const langLibrary=useSelector(state=> state.languages.langLibrary)
     const [tabActive, setTabActive] = React.useState('');
 
     const handleChange = (event, newValue) => {
@@ -43,14 +45,14 @@ function About() {
                 sx={{
                     position: 'absolute',
                     width: '100%',
-                    top: ' 200px',
-                    fontSize: '56px',
+                    top: { md: '200px', xs: '70px' },
+                    fontSize: { md: '56px', xs: '32px' },
                     fontFamily: 'fantasy',
                     textAlign: 'center',
                     margin: '50px 0',
                     color: PRIMARY_COLOR,
                 }} className='animate__animated animate__fadeIn'
-            > Calligraphy</Box>
+            > {langLibrary.calligraphy}</Box>
             <Box sx={{
                 background: '#E7F7F9',
                 marginTop: '-3px'
@@ -62,12 +64,17 @@ function About() {
                         onChange={handleChange}
                         aria-label="icon tabs"
                         sx={{
+
                             '& .MuiTabs-flexContainer':
                             {
-                                justifyContent: 'center'
+                                justifyContent: { md: 'center', xs: 'flex-start' },
+                                overflowX: { md: 'hidden', xs: 'auto' },
+                                '::-webkit-scrollbar': {
+                                    display: 'none',
+                                },
                             },
                             '& button': {
-                                color: SECONDAEY_COLOR
+                                color: SECONDARY_COLOR
                             },
                             '& .Mui-selected': {
                                 color: 'white!important',
@@ -86,7 +93,6 @@ function About() {
             </Box>
             <Container maxWidth="lg">
                 <Gallery filter={tabActive} />
-                <br />
                 <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_mb9ka7yz.json"
                     class="animate__animated animate__fadeIn" background="transparent" speed="1" loop autoplay
                     style={{

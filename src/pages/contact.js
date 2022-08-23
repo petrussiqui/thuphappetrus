@@ -37,14 +37,14 @@ const CusTextField = styled(TextField)(() => ({
         color: CusConst.TEXT_COLOR,
     },
     '& .MuiInput-underline:after': {
-        borderBottomColor: CusConst.SECONDAEY_COLOR,
+        borderBottomColor: CusConst.SECONDARY_COLOR,
     },
     '& .MuiOutlinedInput-root': {
         '&:hover fieldset': {
-            borderColor: CusConst.SECONDAEY_COLOR,
+            borderColor: CusConst.SECONDARY_COLOR,
         },
         '&.Mui-focused fieldset': {
-            borderColor: CusConst.SECONDAEY_COLOR,
+            borderColor: CusConst.SECONDARY_COLOR,
         },
     },
 }));
@@ -74,7 +74,9 @@ function Contact() {
                         </CusBoxForm>
                     </CusGridContent>
                     <Grid item xs={12} md={7}>
-                        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_eroqjb7w.json"
+                        <lottie-player 
+                        // src="https://assets7.lottiefiles.com/packages/lf20_1cazwtnc.json"
+                        src="https://assets9.lottiefiles.com/packages/lf20_eroqjb7w.json"
                             background="transparent" loop autoplay></lottie-player>
                     </Grid>
                 </CusGrid>

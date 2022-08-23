@@ -14,20 +14,20 @@ import React from "react";
 const CusGrid = styled(Grid)(() => ({
     marginTop: '20px',
     "& hr": {
-        border: `1px solid ${CusConst.SECONDAEY_COLOR}`,
+        border: `1px solid ${CusConst.SECONDARY_COLOR}`,
         marginBottom: '70px'
     },
 }));
 const CusIconButton = styled(IconButton)(() => ({
     marginBottom: '50px',
-    color: CusConst.SECONDAEY_COLOR,
+    color: CusConst.SECONDARY_COLOR,
     '&.MuiSvgIcon-root': {
 
     },
 
 }));
 const CusListItemIcon = styled(ListItemIcon)(() => ({
-    color: CusConst.SECONDAEY_COLOR,
+    color: CusConst.SECONDARY_COLOR,
 }));
 
 //Custom Tag with scss and responsive

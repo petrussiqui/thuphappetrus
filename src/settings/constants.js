@@ -2,7 +2,7 @@ import { Button, styled } from "@mui/material";
 
 //COLOR
 export const PRIMARY_COLOR = '#41D1DC';
-export const SECONDAEY_COLOR = '#18B8C6';
+export const SECONDARY_COLOR = '#18B8C6';
 export const THIRD_COLOR = '#9CE2EA';
 export const TEXT_COLOR = '#3A383D';
 export const TEXT2_COLOR = '#231F20';
