@@ -30,7 +30,7 @@ const CusBox = styled(Box)(({ theme }) => ({
 const CusDrawer = styled(Drawer)(({ theme }) => ({
     '& .MuiDrawer-paper': {
         justifyContent: 'center',
-        backgroundImage: 'url(/petrus-app/img/right.png)',
+        backgroundImage: 'url(/thuphappetrus/img/right.png)',
         backgroundRepeat: 'no-repeat',
         '& ul': {
             display: ' flex',

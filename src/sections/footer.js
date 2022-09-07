@@ -91,7 +91,7 @@ const contacts = [
 function Footer() {
     return (
         <Box sx={{ position: 'relative' }}>
-            <img src="/petrus-app/img/bottom3.png" width='100%' alt="bgfooter"
+            <img src="/thuphappetrus/img/bottom3.png" width='100%' alt="bgfooter"
                 style={{ position: 'absolute', bottom: '0', zIndex: '-1' }} />
             <Container maxWidth="xl" >
                 <CusGrid container columnSpacing={2} sx={{ alignItems: 'center' }}>
@@ -107,7 +107,7 @@ function Footer() {
                         }
                     }}>
                         <img
-                            src="/petrus-app/img/logo550tranparent.png"
+                            src="/thuphappetrus/img/logo550tranparent.png"
                             alt="Logo"
                             width='250px'
                         />

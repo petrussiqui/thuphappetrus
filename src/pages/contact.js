@@ -52,7 +52,7 @@ const CusTextField = styled(TextField)(() => ({
 function Contact() {
     return (
         <React.Fragment>
-            <img src="/petrus-app/img/top3.png" alt='bgtop' style={{
+            <img src="/thuphappetrus/img/top3.png" alt='bgtop' style={{
                 width: '100%',
                 position: 'absolute',
                 zIndex: '-1',

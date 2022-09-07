@@ -81,7 +81,7 @@ function Homepage() {
         <React.Fragment>
             <Box sx={{
                 textAlign: 'center',
-                backgroundImage: 'url("/petrus-app/img/top3.png")',
+                backgroundImage: 'url("/thuphappetrus/img/top3.png")',
                 backgroundPositionY: 'top',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
@@ -118,7 +118,7 @@ function Homepage() {
                                         Read More
                                     </CusButton>
                                     <CusButton variant="contained">
-                                        <NavLink to="/petrus-app/contact/">
+                                        <NavLink to="/thuphappetrus/contact/">
                                             Contact
                                         </NavLink>
                                     </CusButton>
@@ -133,7 +133,7 @@ function Homepage() {
                             <Box className='animate__animated animate__zoomIn' sx={{
                                 padding: { xs: '35px 50px 0px' },
                             }}>
-                                <img src='/petrus-app/img/me.png' alt="Person" width='100%'
+                                <img src='/thuphappetrus/img/me.png' alt="Person" width='100%'
                                     style={{
                                         clipPath: 'polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)',
                                         float: 'right'
@@ -147,7 +147,7 @@ function Homepage() {
                 </Container>
             </Box>
             <CusBoxImg1>
-                <img src='/petrus-app/img/tech.png' alt="leaf" width='100%' />
+                <img src='/thuphappetrus/img/tech.png' alt="leaf" width='100%' />
             </CusBoxImg1>
             <Container maxWidth="lg">
                 <CusGrid container columnSpacing={2} id='section2'
@@ -169,7 +169,7 @@ function Homepage() {
                             I will be able to construct responsive websites using CSS, Flexbox and CSS Grid, develop interactive websites and UI (User Interface) applications using JavaScript and HTML, and connect a web application to backend server data using JavaScript. Students will also build competency automating application build and deployment using Webpack and improving offline performance of websites using Service Worker.
                         </Box>
                         <CusButton variant="contained" sx={{ marginLeft: '0', marginRight: '0' }}>
-                            <NavLink to="/petrus-app/porfolio/">
+                            <NavLink to="/thuphappetrus/porfolio/">
                                 Read More
                             </NavLink>
                         </CusButton>
@@ -193,7 +193,7 @@ function Homepage() {
             </Container> */}
             <Container maxWidth='false' sx={{ position: 'relative' }}>
                 <CusBoxImg2>
-                    <img src='/petrus-app/img/tech.png' alt="leaf" width='100%'
+                    <img src='/thuphappetrus/img/tech.png' alt="leaf" width='100%'
                         style={{ transform: 'scaleX(-1)' }}
                     /></CusBoxImg2>
             </Container>
@@ -207,7 +207,7 @@ function Homepage() {
                             Calligraphy giving is a special traditional custom in Vietnam which originated from the art of writing beautifully. Like many other Vietnamese traditions, no one can tell exactly where and when it began, but anyone can tell its importance and cultural value.
                         </Box>
                         <CusButton variant="contained" sx={{ marginLeft: '0', marginRight: '0' }}>
-                            <NavLink to="/petrus-app/calligraphy/">
+                            <NavLink to="/thuphappetrus/calligraphy/">
                                 Read More
                             </NavLink>
                         </CusButton>

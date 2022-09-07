@@ -12,11 +12,11 @@ function Header() {
         }}>
             <Container maxWidth="lg">
                 <Toolbar disableGutters sx={{ my: 1 }}>
-                    <Box component='a' href="/petrus-app/"
+                    <Box component='a' href="/thuphappetrus/"
                         sx={{ '& img': { width: { xs: '70px', sm: '100px' } } }}
                     >
                         <img
-                            src="/petrus-app/img/logo550tranparent.png"
+                            src="/thuphappetrus/img/logo550tranparent.png"
                             alt="Logo"
                         /></Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>

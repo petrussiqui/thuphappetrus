@@ -9,7 +9,7 @@ import Calligraphy from "./pages/calligraphy";
 export default function Router() {
   let element = useRoutes([
     {
-      path: "/petrus-app/",
+      path: "/thuphappetrus/",
       element: <Homepage />
       // children: [
       //   {
@@ -19,12 +19,12 @@ export default function Router() {
       //   { path: "tasks", element: <DashboardTasks /> },
       // ],
     },
-    { path: '/petrus-app/about-me', element: <About /> },
-    { path: '/petrus-app/porfolio', element: <Porfolio /> },
-    { path: '/petrus-app/calligraphy', element: <Calligraphy /> },
-    { path: '/petrus-app/contact', element: <Contact /> },
-    { path: '/petrus-app/404', element: <Page404 /> },
-    { path: '/petrus-app/*', element: <Navigate to="/petrus-app/404" replace /> },
+    { path: '/thuphappetrus/about-me', element: <About /> },
+    { path: '/thuphappetrus/porfolio', element: <Porfolio /> },
+    { path: '/thuphappetrus/calligraphy', element: <Calligraphy /> },
+    { path: '/thuphappetrus/contact', element: <Contact /> },
+    { path: '/thuphappetrus/404', element: <Page404 /> },
+    { path: '/thuphappetrus/*', element: <Navigate to="/thuphappetrus/404" replace /> },
   ]);
   return element;
 } 

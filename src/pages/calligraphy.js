@@ -20,7 +20,7 @@ function About() {
     };
     return (
         <React.Fragment>
-            <img src="/petrus-app/img/banner3.png" alt="banner" width='100%' />
+            <img src="/thuphappetrus/img/banner3.png" alt="banner" width='100%' />
             <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_z5avtirw.json"
                 style={{
                     position: 'absolute',

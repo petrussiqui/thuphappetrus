@@ -49,7 +49,7 @@ const settings = {
 function About() {
     return (
         <React.Fragment>
-            <img src="/petrus-app/img/banner.png" alt="banner" width='100%' />
+            <img src="/thuphappetrus/img/banner.png" alt="banner" width='100%' />
             <LazyLoad>
                 <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_d4xlubji.json"
                     style={{
@@ -78,7 +78,7 @@ function About() {
                     marginTop: '-100px',
                     width: { md: '300px', xs: '150px' },
                 }}>
-                    <img src='/petrus-app/img/me3.jpeg' alt="Person" width='100%'
+                    <img src='/thuphappetrus/img/me3.jpeg' alt="Person" width='100%'
                         style={{
                             clipPath: 'polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)',
                         }}
