@@ -11,7 +11,7 @@ import Gallery from "../components/Gallery";
 import { useSelector } from "react-redux";
 
 
-function About() {
+function Calligraphy() {
     const langLibrary=useSelector(state=> state.languages.langLibrary)
     const [tabActive, setTabActive] = React.useState('');
 
@@ -41,7 +41,7 @@ function About() {
                 }}
                 class="Hidden-Mobile animate__animated animate__fadeInUp"
                 background="transparent" speed="1" loop autoplay></lottie-player>
-            <Box component='h1'
+            {/* <Box component='h1'
                 sx={{
                     position: 'absolute',
                     width: '100%',
@@ -52,7 +52,7 @@ function About() {
                     margin: '50px 0',
                     color: PRIMARY_COLOR,
                 }} className='animate__animated animate__fadeIn'
-            > {langLibrary.calligraphy}</Box>
+            > {langLibrary.calligraphy}</Box> */}
             <Box sx={{
                 background: '#E7F7F9',
                 marginTop: '-3px'
@@ -105,4 +105,4 @@ function About() {
         </React.Fragment>
     );
 }
-export default About
+export default Calligraphy
