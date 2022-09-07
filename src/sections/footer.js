@@ -73,7 +73,7 @@ const contacts = [
 
     {
         icon: <LocalPhoneRoundedIcon />,
-        text: '0939 800 xxx',
+        text: '0939 800 713',
         link: 'tel:0939800713'
     },
     {
@@ -84,7 +84,7 @@ const contacts = [
     {
         icon: <LocationOnIcon />,
         text: 'Binh Thanh District, HCM City',
-        link: 'https://goo.gl/maps/CPcdGZhyXg3EqTVL7'
+        link: 'https://goo.gl/maps/a4mN3P9kipA5swSaA'
     },
 ]
 
@@ -103,15 +103,15 @@ function Footer() {
                         alignItems: 'center',
                         flexFlow: 'column',
                         '& img': {
-                            width: { xs: '160px', md: '250px' }
+                            width: { xs: '100px', md: '150px' }
                         }
                     }}>
                         <img
-                            src="/thuphappetrus/img/logo550tranparent.png"
+                            src="/thuphappetrus/thuphappetrus.png"
                             alt="Logo"
-                            width='250px'
+                            width='150px'
                         />
-                        <Box component="p" sx={{ fontSize: '15px' }}>Spread Warmth and Positive Energy</Box>
+                        <Box component="p" sx={{ fontSize: '15px' }}>Art and Messages Of Life</Box>
                     </Grid>
                     <Grid item xs={0} sm={2} md={4} sx={{ display: { xs: 'none', sm: 'unset' } }}>
                         <hr />
@@ -140,13 +140,13 @@ function Footer() {
                     </Grid>
                     <CusGridContent item xs={12} md={4} sx={{}}>
                         <Box component="h3">Social</Box>
-                        <CusIconButton aria-label="Facebook" href='https://fb.com' target='_blank'>
+                        <CusIconButton aria-label="Facebook" href='https://fb.com/thuphappetrus' target='_blank'>
                             <FacebookRoundedIcon></FacebookRoundedIcon>
                         </CusIconButton>
                         <CusIconButton aria-label="Youtube" href='https://youtube.com' target='_blank'>
                             <YouTubeIcon></YouTubeIcon>
                         </CusIconButton>
-                        <CusIconButton aria-label="Instagram" href='https://instagram.com' target='_blank'>
+                        <CusIconButton aria-label="Instagram" href='https://instagram.com/petrus_si_qui' target='_blank'>
                             <InstagramIcon></InstagramIcon>
                         </CusIconButton>
                     </CusGridContent>

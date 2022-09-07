@@ -13,10 +13,10 @@ function Header() {
             <Container maxWidth="lg">
                 <Toolbar disableGutters sx={{ my: 1 }}>
                     <Box component='a' href="/thuphappetrus/"
-                        sx={{ '& img': { width: { xs: '70px', sm: '100px' } } }}
+                        sx={{ '& img': { width: { xs: '30px', sm: '60px' } } }}
                     >
                         <img
-                            src="/thuphappetrus/img/logo550tranparent.png"
+                            src="/thuphappetrus/thuphappetrus.png"
                             alt="Logo"
                         /></Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>

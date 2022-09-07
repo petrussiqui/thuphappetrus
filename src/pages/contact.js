@@ -84,8 +84,9 @@ function Contact() {
             <Container maxWidth="lg">
                 <LazyLoad>
                     <CusBoxIframe>
-                        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8095.971881642214!2d106.7192626022471!3d10.798221391816913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c2f8f30911%3A0x36ac5073f8c91acd!2sLandmark%20TVGB%2081!5e0!3m2!1svi!2s!4v1660127352064!5m2!1svi!2s"
-                            loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15675.244716000425!2d106.7428766!3d10.8257575!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1892138de92e1cac!2zVGjGsCBQaMOhcCBQZXRydXM!5e0!3m2!1svi!2s!4v1662546661399!5m2!1svi!2s">
+                        
+                    </iframe>
                     </CusBoxIframe>
                 </LazyLoad>
             </Container>
