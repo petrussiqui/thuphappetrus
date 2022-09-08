@@ -7,7 +7,7 @@ import * as CusConst from '../settings/constants';
 const pages = [
     { pageLink: '/thuphappetrus/', pageName: 'Home' },
     { pageLink: '/thuphappetrus/about-me', pageName: 'About Me' },
-    { pageLink: '/thuphappetrus/', pageName: 'Blog' },
+    { pageLink: '/../', pageName: 'Blog' },
     { pageLink: '/thuphappetrus/contact/', pageName: 'Contact' },
 ];
 const CusNavLink = styled(NavLink)(() => ({
