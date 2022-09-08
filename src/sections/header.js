@@ -4,7 +4,7 @@ import Menu from "./menu";
 import MobileMenu from "./mobilemenu";
 
 function Header() {
-   
+
     return (
         <AppBar position="sticky" sx={{
             background: 'white',
@@ -13,7 +13,12 @@ function Header() {
             <Container maxWidth="lg">
                 <Toolbar disableGutters sx={{ my: 1 }}>
                     <Box component='a' href="/thuphappetrus/"
-                        sx={{ '& img': { width: { xs: '30px', sm: '60px' } } }}
+                        sx={{
+                            '& img': {
+                                filter: 'hue-rotate(10deg)',
+                                width: { xs: '30px', sm: '60px' }
+                            }
+                        }}
                     >
                         <img
                             src="/thuphappetrus/thuphappetrus.png"
@@ -21,7 +26,7 @@ function Header() {
                         /></Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
                         <Menu />
-                        <LanguagesMenu/>
+                        <LanguagesMenu />
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
                         <MobileMenu />

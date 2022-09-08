@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 
 
 function Calligraphy() {
-    const langLibrary=useSelector(state=> state.languages.langLibrary)
+    const langLibrary = useSelector(state => state.languages.langLibrary)
     const [tabActive, setTabActive] = React.useState('');
 
     const handleChange = (event, newValue) => {
@@ -93,6 +93,11 @@ function Calligraphy() {
             </Box>
             <Container maxWidth="lg">
                 <Gallery filter={tabActive} />
+                <div className="fb-comments"
+                    data-href="https://petrussiqui.github.io/thuphappetrus/"
+                    data-width="100%" data-numposts="5">
+
+                </div>
                 <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_mb9ka7yz.json"
                     class="animate__animated animate__fadeIn" background="transparent" speed="1" loop autoplay
                     style={{

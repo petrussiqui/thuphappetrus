@@ -19,7 +19,7 @@ const CusGrid = styled(Grid)(() => ({
     },
 }));
 const CusIconButton = styled(IconButton)(() => ({
-    marginBottom: '50px',
+    marginBottom: '20px',
     color: CusConst.SECONDARY_COLOR,
     '&.MuiSvgIcon-root': {
 
@@ -103,7 +103,8 @@ function Footer() {
                         alignItems: 'center',
                         flexFlow: 'column',
                         '& img': {
-                            width: { xs: '100px', md: '150px' }
+                            filter: 'hue-rotate(10deg)',
+                            width: { xs: '80px', md: '120px' }
                         }
                     }}>
                         <img
@@ -149,6 +150,11 @@ function Footer() {
                         <CusIconButton aria-label="Instagram" href='https://instagram.com/petrus_si_qui' target='_blank'>
                             <InstagramIcon></InstagramIcon>
                         </CusIconButton>
+                        <div className="fb-page" data-href="https://www.facebook.com/thuphappetrus" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/thuphappetrus" className="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/thuphappetrus">Thư Pháp Petrus</a>
+                            </blockquote>
+                        </div>
                     </CusGridContent>
                 </CusGrid>
             </Container>

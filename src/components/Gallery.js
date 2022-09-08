@@ -7,8 +7,8 @@ import { useState } from 'react';
 
 const itemData = [
     {
-        img: 'https://scontent.fsgn8-2.fna.fbcdn.net/v/t39.30808-6/293816723_423396283136366_4582093402213118153_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=e3f864&_nc_ohc=_semfcSbFDYAX_i1PtI&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn8-2.fna&oh=00_AT9myjuTKuCyZQyNYHv5A96SkufIN_2ri4aaefVtYw0b1g&oe=63006841',
-        title: 'Nhẫn - Medium Frame',
+        img: 'https://scontent.fsgn13-3.fna.fbcdn.net/v/t39.30808-6/293754387_423396716469656_1037785627538318145_n.jpg?stp=cp1_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=jHSVF9z7vQkAX9yWK8A&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn13-3.fna&oh=00_AT_f6LrTF8xaJY1-YOmPPPQWEvjdRb1SyuPhaDh159xFag&oe=631F5588',
+        title: 'Kiên Nhẫn - Small Frame',
         type: 'frames',
     },
     {
@@ -19,16 +19,6 @@ const itemData = [
     {
         img: 'https://scontent.fsgn13-3.fna.fbcdn.net/v/t1.6435-9/138743886_1549479278571279_8570663789824303060_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0debeb&_nc_ohc=J4tka17RuDIAX8F24gQ&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn13-3.fna&oh=00_AT9a2z0wuA2YwCjD6XnlvnYfY6-ihv9WNMzUdDwSgrAT_g&oe=63200D88',
         title: 'Vợ Chồng - Large Frame',
-        type: 'frames',
-    },
-    {
-        img: 'https://scontent.fsgn13-2.fna.fbcdn.net/v/t1.6435-9/56400357_1035496356636243_3220175945201614848_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=0debeb&_nc_ohc=LGo6WKVmRwgAX8zYw2p&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn13-2.fna&oh=00_AT_m-H3uVUKJW0312E-W8mnCdbJhD5Up2x0ySlF4nrLLlg&oe=631F9A01',
-        title: 'Kiên Nhẫn - Small Frame',
-        type: 'frames',
-    },
-    {
-        img: 'https://scontent.fsgn4-1.fna.fbcdn.net/v/t1.6435-9/104290584_1382753355243873_8189766512424384416_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0debeb&_nc_ohc=etgSwj-1Fk8AX-PAxO5&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn4-1.fna&oh=00_AT8YXiuJ47w9BGrpL5Y06V8vIvVdiF1h2vpQfGBJttBKSw&oe=6321ABFE',
-        title: 'Catholic',
         type: 'frames',
     },
     {
@@ -47,23 +37,8 @@ const itemData = [
         type: 'frames',
     },
     {
-        img: 'https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/272384539_1812588218927049_5108454773371552851_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0debeb&_nc_ohc=Lbs1zIOht4MAX_uqSAs&_nc_ht=scontent.fsgn4-1.fna&oh=00_AT8P-79Vimg3En93fo3fr8IZB2LYTKOU38hMtWXBXdJpFA&oe=62FF7EE1',
-        title: 'Catholic',
-        type: 'papers',
-    },
-    {
         img: 'https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.6435-9/142738094_1557595497759657_2802458500362540729_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0debeb&_nc_ohc=kUEpcEfnbG4AX-AOBFH&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn3-1.fna&oh=00_AT95MM69jGigSEkzsko2gzebT8tviY-EuDcXGIb1QyPeTQ&oe=6321B4C9',
         title: 'Catholic',
-        type: 'papers',
-    },
-    {
-        img: 'https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/271664684_1803475253171679_7604334081987489477_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0debeb&_nc_ohc=akg5vv7WGrwAX9jyMor&_nc_ht=scontent.fsgn3-1.fna&oh=00_AT9v_m4FtFUWQIbUmYXl2DsKbNNAr3uifTxVT0q3DNFxlA&oe=63001726',
-        title: 'Giảm Cân',
-        type: 'papers',
-    },
-    {
-        img: 'https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.6435-9/176150939_287567929708418_5020359352466659593_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Ljai-q02UiEAX_nsw_B&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn3-1.fna&oh=00_AT-TwhT6eIkY03rzdBVWF9gcuh2jRkAFvIY4yesV8p7uQQ&oe=631F1127',
-        title: 'Cha Mẹ',
         type: 'papers',
     },
     {
@@ -72,23 +47,18 @@ const itemData = [
         type: 'papers',
     },
     {
-        img: 'https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/295096919_426515972824397_6426774860541614610_n.jpg?stp=cp1_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=ssqJ9IWEB0gAX_dIudJ&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn13-2.fna&oh=00_AT-6JQ2qAwoMr53--g2ft9w7qS1rEKJvi3mIwGHrR8b0Dg&oe=63002ECE',
+        img: 'https://scontent.fsgn13-3.fna.fbcdn.net/v/t39.30808-6/272300755_1812589912260213_5243976231311823090_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0debeb&_nc_ohc=jm7ZSHXAuaoAX-S5FiC&_nc_ht=scontent.fsgn13-3.fna&oh=00_AT_TG-PR5pEYIAHXs7pmEvmFAEJcKdERWiz9M2IjDj2NUA&oe=631E0612',
+        title: 'Tâm',
+        type: 'papers',
+    },
+    {
+        img: 'https://scontent.fsgn13-3.fna.fbcdn.net/v/t39.30808-6/272279596_1812589975593540_2170495978280991746_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=K7yCIQpRXKAAX_K_XcV&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn13-3.fna&oh=00_AT9EbssLTKqbEPjCZ2-vFtnNx1v_bVQL6oGbQkkkf1HTrA&oe=631F0804',
+        title: 'Cha mẹ',
+        type: 'papers',
+    },
+    {
+        img: 'https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/295096919_426515972824397_6426774860541614610_n.jpg?stp=cp1_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=rN1ggNfPVNwAX-D2rl7&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn13-2.fna&oh=00_AT9DEN34-8RyRt_ZZoBoBaYLFrra0uJ3R2WPA6KOxRj8Pg&oe=631DD88E',
         title: 'Tin - Quy Nhơn pebble',
-        type: 'pebbles',
-    },
-    {
-        img: 'https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/295044296_426515986157729_5243398453668395925_n.jpg?stp=cp1_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=BpgO1C5AL38AX8MVKo4&_nc_ht=scontent.fsgn4-1.fna&oh=00_AT81bLOTafcOd7K0IC6YtApBaJAMhMOAeGm6Lm3AQf_o9Q&oe=630046E9',
-        title: 'Mến - Quy Nhơn pebble ',
-        type: 'pebbles',
-    },
-    {
-        img: 'https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/295283825_427132879429373_5070869939828349306_n.jpg?stp=cp1_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=3uKNHjVgVsoAX8yrA-h&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn3-1.fna&oh=00_AT-LRdl9OeBmyNQniiOCGAlmGzf9ZrxnF8tE_8BqQ2Eyww&oe=62FF9C23',
-        title: 'An - Cỗ Thạch pebble',
-        type: 'pebbles',
-    },
-    {
-        img: 'https://scontent.fsgn13-3.fna.fbcdn.net/v/t39.30808-6/295416254_427132926096035_9086107019128874855_n.jpg?stp=cp1_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=FGEob4BOX6oAX9WnZHD&_nc_ht=scontent.fsgn13-3.fna&oh=00_AT9c7tRzaGG2oPQ7mSYMSR4Zfu4BjjTxUQDDzxaTKotcKA&oe=630037F1',
-        title: 'Vô Tư - Cỗ Thạch pebble',
         type: 'pebbles',
     },
     {
@@ -96,6 +66,7 @@ const itemData = [
         title: 'Vô Tư - Cỗ Thạch pebble',
         type: 'pebbles',
     },
+
     {
         img: 'https://scontent.fsgn13-2.fna.fbcdn.net/v/t1.6435-9/145395289_1563536643832209_6593035120495217250_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=0debeb&_nc_ohc=1VrQNoQkTDEAX9TaXSc&_nc_ht=scontent.fsgn13-2.fna&oh=00_AT8Yo0YTwGEYDqCijw2imrAoLWlRuzqCS3cVkU87Gy-WmQ&oe=63218282',
         title: 'Phúc - Gourd',
@@ -116,26 +87,6 @@ const itemData = [
         title: 'Lộc - Coconut',
         type: 'others',
     },
-    {
-        img: 'https://scontent.fsgn13-3.fna.fbcdn.net/v/t39.30808-6/271824931_462749775523565_7331201054760908998_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=102&ccb=1-7&_nc_sid=a4a2d7&_nc_ohc=PC475JA9dukAX--rG1N&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn13-3.fna&oh=00_AT9g1dctY8EM-rpDDKyzKWttX3wL-3lqfuUzyuozbqtz3g&oe=630122DC',
-        title: 'Bao Lì Xì',
-        type: 'others',
-    },
-    {
-        img: 'https://scontent.fsgn8-2.fna.fbcdn.net/v/t39.30808-6/272153387_466897561775453_7788437123873466021_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=100&ccb=1-7&_nc_sid=a4a2d7&_nc_ohc=avWN3AQUwv4AX9NQ9oO&tn=W67W2u7LmJHcXzOa&_nc_ht=scontent.fsgn8-2.fna&oh=00_AT8UcfBABHbzLLtmin5IE0m1I4IlWMKc9kt8hV6cPKTTPg&oe=63002270',
-        title: 'Bao Lì Xì',
-        type: 'others',
-    },
-    {
-        img: 'https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/272264338_466897585108784_2218762208713552667_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=103&ccb=1-7&_nc_sid=a4a2d7&_nc_ohc=AC_N-OUZ--oAX82gnxY&_nc_ht=scontent.fsgn4-1.fna&oh=00_AT-kyqb8dW3lKZxVPEAuHMucF438j38MNd4H9BCVmRWjBA&oe=630003C8',
-        title: 'Bao Lì Xì',
-        type: 'others',
-    },
-    {
-        img: 'https://scontent.fsgn13-2.fna.fbcdn.net/v/t1.6435-9/104794019_1378049009047641_3971585274296060406_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=RlkMKFaCe0cAX_LKjHs&_nc_ht=scontent.fsgn13-2.fna&oh=00_AT9CB53knkUS_ueQMWCzK5QkZfMEeGPosy-PBA9IppChnQ&oe=631F501C',
-        title: 'Lặng - Wood',
-        type: 'others',
-    },
 
 
 ];
@@ -147,8 +98,7 @@ function Gallery({ filter }) {
             itemData.filter((item) => item.type === filter))
     }, [filter]);
     return (
-        <ImageList sx={{ width: '100%' }} cols={3}>
-           
+        <ImageList sx={{ width: '100%' }} cols={4}>
                 {dataFilter.map((item) => (
                     <ImageListItem key={item.img}>
                         <img
@@ -157,12 +107,6 @@ function Gallery({ filter }) {
                             alt={item.title}
                             loading="lazy"
                         />
-                        {/* <img
-                        src={`${item.img}?w=250&h=250&fit=crop&auto=format`}
-                        srcSet={`${item.img}?w=250&h=250&fit=crop&auto=format&dpr=2 1x`}
-                        alt={item.title}
-                        loading="lazy"
-                    /> */}
                     </ImageListItem>
                 ))}
         </ImageList>
