@@ -1,0 +1,15 @@
+export const CoinImage = {
+  BTC: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
+  FIL: "https://s2.coinmarketcap.com/static/img/coins/64x64/2280.png",
+  LUNA: "https://s2.coinmarketcap.com/static/img/coins/64x64/4172.png",
+  BNB: "https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png",
+  BUSD: "https://s2.coinmarketcap.com/static/img/coins/64x64/4687.png",
+  ETH: "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png",
+  MATIC: "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png",
+  USDT: "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png",
+  SWLD: "/images/coin/SWLD.png",
+  SWP: "/images/coin/SWP.png",
+  SWE: "/images/coin/SWE.png",
+  BSC: "https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png",
+  POLYGON: "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png",
+};

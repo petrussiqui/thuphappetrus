@@ -1,0 +1,94 @@
+:root {
+  --color-primary: #222;
+  --color-secondary: rgb(0, 255, 249);
+  --color-third: #e4e5ea;
+  --color-accent: #e4e5ea;
+  --color-link: #111;
+  --color-text: #222;
+  --color-subtext: #222;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-blue: #aafafe;
+  --color-red: #e50100;
+
+  --color-footer: #e4e5ea;
+  --color-background: #fff;
+
+  --linear-primary: #ddd;
+  --linear-primary-10: #ddd;
+  --linear-primary-50: #ddd;
+  --shadow-primary: 0 0 6px rgba(158, 255, 255, 0.5), 0 0 12px rgba(158, 255, 255, 0.5);
+
+  --border: 1px solid #ddd;
+}
+
+#root {
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  overflow-x: clip;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: var(--color-accent);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--color-accent);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(217, 255, 222, 0.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+a,
+.MuiLink-root {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+.Toastify__toast {
+  position: relative;
+  border-radius: 16px;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border-radius: 16px;
+    padding: 1px;
+    background: var(--linear-primary);
+    -webkit-mask:
+      linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box content-box,
+      linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+    -webkit-mask-composite: xor;
+    z-index: -1;
+  }
+}
+
+.MuiBackdrop-root {
+  backdrop-filter: blur(2px);
+}
+
+.MuiTypography-root {
+  font-family: "Be Vietnam Pro", sans-serif !important;
+}
+@media (max-width: 576px) {
+  .MuiTypography-body1 {
+    font-size: 14px !important;
+  }
+}
